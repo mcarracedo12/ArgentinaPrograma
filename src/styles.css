@@ -1,1 +1,101 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: rgb(219, 218, 218);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+}
+header .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    height: 50px;
+    background-color: black;
+}
+header .right{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 35px;
+}
+header .left{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 35px;
+}
+header h3{
+    color: azure;
+}
+header div .right img{
+    height: 50px;
+    width: 150px;
+    border-radius: 35px;
+    padding: 10px;
+}
+header div .left img{
+    height: 50px;
+    width: 50px;
+    border-radius: 35px;
+    padding: 10px;
+}
+header img{
+    width: 100%;
+    height: 305px;
+}
+
+/* DESDE LA FOTO DE PERFIL */
+#info-img{
+    display: flex;
+    justify-content:flex-start;
+}
+.profile-img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: -110px;
+    z-index: 1;
+    align-self: auto;
+}
+
+/* ABOUT */
+div#info-data{
+    display: flex;
+    justify-content: space-around;
+}
+div#info-data h1{
+    font-style: italic;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: fuchsia;
+}
+#info-data ul{
+    width: 232px;
+    list-style: none;
+    flex-shrink: 0;
+}
+ul li{
+    margin: 20px;
+}
+div#info-data ul#info-details li a h2{
+    font-size: 1rem;
+    align-self: center;
+    vertical-align: baseline;
+    color: #33495f;
+}
+div#info-data ul#info-details li a h2:hover{
+    font-size: 1.1rem;
+    align-self: center;
+    vertical-align: baseline;
+    color: #1c2229;
+}
+div#info-data ul#info-details li a img{
+    width: 200px;
+    height: 50px;
+    margin-right: 8px;
+    border-radius: 32px;
+}   
+
