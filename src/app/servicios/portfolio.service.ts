@@ -8,7 +8,7 @@ export class PortfolioService {
   constructor() { }
 
   obtenerDatos(){
-    console.log("Servicio ObtenerDatos esta corriendo")
+    console.log("Bien !! Servicio ObtenerDatos esta corriendo")
   }
 }
 
