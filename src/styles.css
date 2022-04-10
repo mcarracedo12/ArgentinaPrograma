@@ -61,18 +61,18 @@ header img{
 }
 
 /* ABOUT */
-div#info-data{
+div.mat-card{
     display: flex;
     justify-content: space-around;
 }
-div#info-data h1{
+div.mat-card h1{
     font-style: italic;
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.25;
     color: fuchsia;
 }
-#info-data ul{
+.mat-card ul{
     width: 232px;
     list-style: none;
     flex-shrink: 0;
@@ -80,19 +80,19 @@ div#info-data h1{
 ul li{
     margin: 20px;
 }
-div#info-data ul#info-details li a h2{
+div.mat-card ul#info-details li a h2{
     font-size: 1rem;
     align-self: center;
     vertical-align: baseline;
     color: #33495f;
 }
-div#info-data ul#info-details li a h2:hover{
+div.mat-card ul#info-details li a h2:hover{
     font-size: 1.1rem;
     align-self: center;
     vertical-align: baseline;
     color: #1c2229;
 }
-div#info-data ul#info-details li a img{
+div.mat-card ul#info-details li a img{
     width: 200px;
     height: 50px;
     margin-right: 8px;
