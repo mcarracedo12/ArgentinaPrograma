@@ -70,29 +70,30 @@ div.mat-card h1{
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.25;
-    color: fuchsia;
+    color: indigo;
 }
-.mat-card ul{
+.mat-card div{
     width: 232px;
     list-style: none;
     flex-shrink: 0;
 }
-ul li{
+.item{
     margin: 20px;
 }
-div.mat-card ul#info-details li a h2{
+/* div.mat-card h2{
     font-size: 1rem;
     align-self: center;
     vertical-align: baseline;
     color: #33495f;
 }
-div.mat-card ul#info-details li a h2:hover{
+div.mat-card h2:hover{
     font-size: 1.1rem;
     align-self: center;
     vertical-align: baseline;
     color: #1c2229;
-}
-div.mat-card ul#info-details li a img{
+    font-weight: 700;
+} */
+div.mat-card .item a img{
     width: 200px;
     height: 50px;
     margin-right: 8px;
