@@ -47,9 +47,10 @@ header img{
 }
 
 /* DESDE LA FOTO DE PERFIL */
-#info-img{
+#info{
     display: flex;
-    justify-content:flex-start;
+    /* justify-content:flex-start; */
+    justify-content:center;
 }
 .profile-img{
     border-radius: 50%;
@@ -60,11 +61,7 @@ header img{
     align-self: auto;
 }
 
-/* ABOUT */
-div.mat-card{
-    display: flex;
-    justify-content: space-around;
-}
+/* CARDS */
 div.mat-card h1{
     font-style: italic;
     font-size: 1.8rem;
@@ -72,14 +69,34 @@ div.mat-card h1{
     line-height: 1.25;
     color: indigo;
 }
-.mat-card div{
-    width: 232px;
-    list-style: none;
+
+/* div.mat-card{
+    display: flex;
+    justify-content: space-around;
+} */
+
+/* .mat-card div {
+    width: 90%;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+} */
+
+.item {
+    margin: 20px;
+    width: 90%;
+    display: flex;
+    /* flex-direction: row; */
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: nowrap; */
     flex-shrink: 0;
 }
-.item{
-    margin: 20px;
-}
+
 /* div.mat-card h2{
     font-size: 1rem;
     align-self: center;
@@ -100,3 +117,12 @@ div.mat-card .item a img{
     border-radius: 32px;
 }   
 
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* margin-top: 16px; */
+    align-items: stretch;
+    align-content: center;
+    margin: 20px;
+}
