@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-encabezado',
@@ -8,11 +7,15 @@ import { Observable } from 'rxjs';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
+  portfolio:any;
 
   constructor(private obtenerDatos:PortfolioService) {}
 
   ngOnInit(): void {
-    this.obtenerDatos.obtenerDatos().subscribe(data=>{console.log(data);});
+    this.obtenerDatos.obtenerDatos().subscribe(data=>{
+      console.log(data);
+    this.portfolio=data;
+  });
   }
 
 }
