@@ -89,21 +89,13 @@ div.mat-card h1{
 }
 
 div.mat-card .item a img{
-    width: 300px;
-    height: 75px;
+    width: 200px;
+    height: 50px;
     margin-right: 8px;
     border-radius: 32px;
 }   
 
-/* .fecha{
-    width: 20%;
+.icon{
+    height: 40px;
+    width: auto;
 }
-.titulo{
-    width: 30%;
-}
-.img{
-    width: 20%;
-}
-.descripcion{
-    width: 30%;
-} */
