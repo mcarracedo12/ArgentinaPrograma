@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-encabezado',
