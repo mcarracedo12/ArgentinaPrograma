@@ -20,7 +20,16 @@
           <i class="bi bi-github"></i>
         </a>
       </span>
-      <button type="button" class="btn btn-info">Login</button>
+      <!-- <button type="button" class="btn btn-info">Login</button> -->
+      <div>
+        <a routerLink="/" routerLinkActive="active">Inicio</a>
+        <!-- <a routerLink="profile" routerLinkActive="active" *ngIf="authService.logIn">Perfil</a>
+        <a routerLink="login" routerLinkActive="active" *ngIf="authService.logIn">Login</a>
+        <a class="nav-link" (click)="logout()" href="" *ngIf="authService.logIn">Logout</a>  -->
+        <a routerLink="profile" routerLinkActive="active">Perfil</a>
+        <a routerLink="login" routerLinkActive="active">Login</a>
+        <a class="nav-link" href="">Logout</a>
+      </div>
     </div>
   </div>
   <img alt="banner"
