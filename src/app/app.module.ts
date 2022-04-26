@@ -12,6 +12,13 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { LoginComponent } from './componentes/login/login.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
+// import { CommonModule } from '@angular/common';
+import { AuthService } from './auth.service';
+
 
 @NgModule({
   declarations: [
@@ -22,13 +29,18 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
     ExperienciaComponent,
     EducacionComponent,
     HabilidadesComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule, 
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule
+    // CommonModule
   ],
-  providers: [PortfolioService],
+  providers: [PortfolioService, AuthService, Router],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
