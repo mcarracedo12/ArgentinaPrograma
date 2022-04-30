@@ -32,30 +32,32 @@ import { PortfolioService } from './portfolio.service';
 
 
 export class AuthService {
-  url= 'http://localhost:3000/api'; //La url que corresponda
+  url = 'http://localhost:3000/api'; //La url que corresponda
   // token;
-  constructor(private obtenerDatos:PortfolioService, private http: HttpClient) { }
-  
+  constructor(private obtenerDatos: PortfolioService, private http: HttpClient) { }
 
-  portfolioDatos:any;
+
+  portfolioDatos: any;
 
   ngOnInit(): void {
-    this.obtenerDatos.obtenerDatos().subscribe(data=>{
+    this.obtenerDatos.obtenerDatos().subscribe(data => {
       console.log(data);
-    this.portfolioDatos=data})
+      this.portfolioDatos = data
+    })
+  }
 
-  }
-  
-  login(email:string, password:string){
-    if(email==this.portfolioDatos.contacto && password==this.portfolioDatos.contrasenia) {
-        // Guardamos el token en local storage
-        localStorage.setItem('token', 'logueado');
-      }
+  login(email: string, password: any) {
+    // email = "marinacarracedo14@gmail.com";
+    // password = 123;
+    if (email == this.portfolioDatos.contacto && password == this.portfolioDatos.contrasenia) {
+      // Guardamos el token en local storage
+      localStorage.setItem('token', 'logueado');
     }
-  logout(){
-    localStorage.removeItem('token');
   }
-  public get logIn(): boolean{
-    return(localStorage.getItem('token')!==null);
-  }
+  // logout(){
+  //   localStorage.removeItem('token');
+  // }
+  // public get logIn(): boolean{
+  //   return(localStorage.getItem('token')!==null);
 }
+

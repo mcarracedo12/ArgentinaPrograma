@@ -20,13 +20,11 @@
           <i class="bi bi-github"></i>
         </a>
       </span>
-      <button type="button" class="btn btn-info">
-        <!-- Login -->
-        <!-- </button> -->
-        <a routerLink="login" routerLinkActive="active" *ngIf="!logIn"> Login</a>
-      <!-- </button>
-      <button type="button" class="btn btn-info"> -->
-        <a class="nav-link" click="logout()" href="#" *ngIf="logIn"> Logout</a>
+      <button type="button" class="btn btn-info" routerLink="login" routerLinkActive="active" *ngIf="!logIn">
+           Login
+      </button>
+      <button type="button" class="btn btn-info" *ngIf="logIn" (click)="logout()" href="#" >
+          Logout
       </button>
     </div>
   </div>
