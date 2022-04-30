@@ -13,7 +13,7 @@ export class SobreMiComponent implements OnInit {
 
   ngOnInit(): void {
     this.obtenerDatos.obtenerDatos().subscribe(data=>{
-      console.log(data);
+      // console.log(data);
     this.portfolio=data;
   });
   }

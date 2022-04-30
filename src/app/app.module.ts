@@ -14,12 +14,6 @@ import { HabilidadesComponent } from './componentes/habilidades/habilidades.comp
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { LoginComponent } from './componentes/login/login.component';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
-// import { CommonModule } from '@angular/common';
-import { AuthService } from './auth.service';
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,13 +28,9 @@ import { AuthService } from './auth.service';
   ],
   imports: [
     BrowserModule, 
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule
-    // CommonModule
+    HttpClientModule
   ],
-  providers: [PortfolioService, AuthService, Router],
+  providers: [PortfolioService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

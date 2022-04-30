@@ -9,7 +9,13 @@
 
             <li *ngFor="let proyecto of proyectosList">
                 <div class="card border-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header bg-transparent border-success">{{proyecto.nombre}}</div>
+                    <div class="card-header bg-transparent border-success">{{proyecto.nombre}}
+                        <!-- <div class="icons g-col-6 g-col-md-3"> -->
+                        <div class="icons">
+                            <i class="bi bi-pencil-fill"></i>
+                            <i class="bi bi-trash3-fill"></i>
+                        </div>
+                    </div>
                     <div class="card-body text-success">
                         <h5 class="card-title">{{proyecto.descripcion}}</h5>
                         <p class="card-text"></p>
@@ -19,28 +25,5 @@
             </li>
 
         </ul>
-
-
-
-        <!-- <div class="card border-success mb-3" style="max-width: 18rem;">
-                <div class="card-header bg-transparent border-success">Header</div>
-                <div class="card-body text-success">
-                  <h5 class="card-title">Success card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="card-footer bg-transparent border-success">Footer</div>
-              </div>
-
-              <div class="card border-success mb-3" style="max-width: 18rem;">
-                <div class="card-header bg-transparent border-success">Header</div>
-                <div class="card-body text-success">
-                  <h5 class="card-title">Success card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="card-footer bg-transparent border-success">Footer</div>
-              </div> -->
-
-
-
     </div>
 </div>

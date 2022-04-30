@@ -6,32 +6,23 @@
     <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded" id="habilidades">
         <ul>
             <li *ngFor="let habilidad of habilidadesList">
-                {{habilidad.habilidad}} - {{habilidad.porcentaje}} %
+                {{habilidad.habilidad}} {{habilidad.porcentaje}}%
                 <div class="progress">
+                    
                     <div class="progress-bar progress-bar-striped" role="progressbar" style="width: {{habilidad.porcentaje}}%"
                         aria-valuemin="0" aria-valuemax="100">
                     </div>
                 </div>
+
+                <div class="icons g-col-6 g-col-md-3">
+                    <i class="bi bi-pencil-fill"></i>
+                    <i class="bi bi-trash3-fill"></i>
+                    
+                </div>
+
+
             </li>
         </ul>
-        <!-- <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                Skill 2
-            </div>
-
-        </div>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%"
-                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%"
-                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%"
-                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-        </div> -->
+       
     </div>
 </div>
