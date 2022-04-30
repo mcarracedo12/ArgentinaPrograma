@@ -1,27 +1,27 @@
 <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded" id="info">
 
     <div>
-        <img class="position-relative profile-img" alt="imagen" src={{portfolio.img}}/>
+        <img class="position-relative profile-img" alt="imagen" [src]='infoData.img'/>
         <i class="bi bi-pencil-fill"></i>
     </div>
     <div>
         <div>
-            <h1>{{portfolio.id}}</h1>
+            <h1>{{infoData.id}}</h1>
 
             <div id="info-titulo">
-                <h3>{{portfolio.tituloactual}}</h3>
+                <h3>{{infoData.tituloactual}}</h3>
             </div>
             <div id="info-company">
-                <h2>{{portfolio.empresa}}</h2>
+                <h2>{{infoData.empresa}}</h2>
             </div>
             <div id="info-puesto">
-                {{portfolio.puesto}}
+                {{infoData.puesto}}
             </div>
             <div id="info-contact">
-                {{portfolio.contacto}}
+                {{infoData.contacto}}
             </div>
             <div id="info-location">
-                {{portfolio.ciudad}}, {{portfolio.provincia}} ({{portfolio.pais}})
+                {{infoData.ciudad}}, {{infoData.provincia}} ({{infoData.pais}})
             </div>
         </div>
         <div>

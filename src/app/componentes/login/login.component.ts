@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
+
 
 @Component({
   selector: 'app-login',
@@ -6,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor() { }
+  loginData:any;
+  constructor(private obtenerDatos: PortfolioService) { }
   ngOnInit(): void {
+    this.obtenerDatos.obtenerDatos().subscribe(data => {
+      // console.log(data);
+      this.loginData = data;
+    });
   }
 }
 
@@ -19,7 +26,7 @@ export class LoginComponent implements OnInit {
 // // import { AuthService } from 'src/app/auth.service';
 // import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
 // import { Validators } from '@angular/forms';
-// // import { PortfolioService } from 'src/app/servicios/portfolio.service';
+// import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 // @Component({
 //   selector: 'app-login',
@@ -27,28 +34,28 @@ export class LoginComponent implements OnInit {
 //   styleUrls: ['./login.component.css']
 // })
 // export class LoginComponent implements OnInit {
-// // export class LoginComponent implements OnInit {
+// export class LoginComponent implements OnInit {
 // // form;
-//   form:FormGroup = new FormGroup({
-//     email:new FormControl,
-//     password:new FormControl
-//   });
+  // form:FormGroup = new FormGroup({
+  //   email:new FormControl,
+  //   password:new FormControl
+  // });
 //   email="";
 //   password="";
 //   // private authService:AuthService,
-//   constructor( private formBuilder:FormBuilder) {
-//     this.form=this.formBuilder.group({
-//       password:['',[Validators.required, Validators.email]],
-//       email:['',[Validators.required, Validators.minLength(8)]],
-//     })
-//    }
-//   logIn(){
+  // constructor( private formBuilder:FormBuilder) {
+  //   this.form=this.formBuilder.group({
+  //     password:['',[Validators.required, Validators.email]],
+  //     email:['',[Validators.required, Validators.minLength(8)]],
+  //   })
+  //  }
+  // logIn(){
 //     //el servicio authService ya redirecciona en caso de inicio de sesion positivo
-//     // this.login(this.email, this.password)
+    // this.login(this.email, this.password)
 //     // this.authService.login(this.email, this.password)
 //     // console.log;
-//   }
-//   ngOnInit(){}
+  // }
+  // ngOnInit(){}
 //   get Password(){
 //     return this.form.get("password");
 //   }

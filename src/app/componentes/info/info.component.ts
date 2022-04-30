@@ -7,14 +7,15 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./info.component.css']
 })
 export class InfoComponent implements OnInit {
-  portfolio:any;
-  constructor(private obtenerDatos:PortfolioService) {}
+  infoData: any;
+  constructor(private obtenerDatos: PortfolioService) {
+    }
 
-  ngOnInit(): void {
-    this.obtenerDatos.obtenerDatos().subscribe(data=>{
-      console.log(data);
-      this.portfolio=data;
+    ngOnInit(): void {
+    this.obtenerDatos.obtenerDatos().subscribe(data => {
+      // console.log(data);
+      this.infoData = data;
     });
   }
-
 }
+
