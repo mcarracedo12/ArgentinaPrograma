@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/servicios/auth.service';
 
 
 @Component({
@@ -8,13 +9,18 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginData:any;
-  constructor(private obtenerDatos: PortfolioService) { }
+  email:string="";
+  password:string="";
+
+  
+  
+  constructor(private authservice: AuthService) { }
+
+  logIn(){
+    this.authservice.login(this.email,this.password)
+  }
   ngOnInit(): void {
-    this.obtenerDatos.obtenerDatos().subscribe(data => {
-      // console.log(data);
-      this.loginData = data;
-    });
+    
   }
 }
 
