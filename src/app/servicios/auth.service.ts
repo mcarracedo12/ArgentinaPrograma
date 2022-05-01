@@ -57,7 +57,8 @@ export class AuthService {
   // logout(){
   //   localStorage.removeItem('token');
   // }
-  // public get logIn(): boolean{
-  //   return(localStorage.getItem('token')!==null);
+  public get logIn(): boolean{
+    return(localStorage.getItem('token')!==null);
+  }
 }
 

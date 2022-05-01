@@ -17,4 +17,7 @@ export class ExperienciaComponent implements OnInit {
 
   }
 
+  public get logIn(): boolean{
+    return(localStorage.getItem('token')!==null);
+  }
 }

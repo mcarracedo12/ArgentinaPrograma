@@ -17,5 +17,8 @@ export class InfoComponent implements OnInit {
       this.infoData = data;
     });
   }
+  public get logIn(): boolean{
+    return(localStorage.getItem('token')!==null);
+  }
 }
 

@@ -17,5 +17,7 @@ export class SobreMiComponent implements OnInit {
     this.sobremiData=data;
   });
   }
-
+  public get logIn(): boolean{
+    return(localStorage.getItem('token')!==null);
+  }
 }

@@ -16,5 +16,7 @@ export class ProyectosComponent implements OnInit {
     this.proyectosList=data.proyectos})
 
   }
-
+  public get logIn(): boolean{
+    return(localStorage.getItem('token')!==null);
+  }
 }

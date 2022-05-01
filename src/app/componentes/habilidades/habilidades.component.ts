@@ -16,5 +16,7 @@ export class HabilidadesComponent implements OnInit {
     this.habilidadesList=data.habilidades})
 
   }
-
+  public get logIn(): boolean{
+    return(localStorage.getItem('token')!==null);
+  }
 }
