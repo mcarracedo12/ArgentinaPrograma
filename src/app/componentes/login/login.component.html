@@ -1,18 +1,22 @@
 <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
-    <div>
-        <label for="email" value="email">
+    <div class="row mb-3">
+        <label for="email" class="col-sm-2 col-form-label">
             Email:
         </label>
-        <input type="email" formControlName="mail">
+        <div class="col-sm-10">
+            <input class="form-control" type="email" formControlName="mail" placeholder="marinacarracedo14@gmail.com">
+        </div>
     </div>
 
     <br />
-    <div>
-        <label for="password" value="password" class="form-label">
+    <div class="row mb-3">
+        <label for="password" class="col-sm-2 col-form-label">
             Password:
         </label>
-        <input type="password" formControlName="password">
+        <div class="col-sm-10">
+            <input type="password" class="form-control" formControlName="password" placeholder="123">
+        </div>
     </div>
     <br />
-    <button type="submit">Iniciar sesión</button>
+    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
 </form>
