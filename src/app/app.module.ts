@@ -15,6 +15,7 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { LoginComponent } from './componentes/login/login.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AgregarFormacionComponent } from './componentes/educacion/agregar-formacion/agregar-formacion.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     EducacionComponent,
     HabilidadesComponent,
     ProyectosComponent,
-    LoginComponent
+    LoginComponent,
+    AgregarFormacionComponent
   ],
   imports: [
     BrowserModule, 

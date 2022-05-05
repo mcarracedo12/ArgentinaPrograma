@@ -22,5 +22,8 @@ export class EducacionComponent implements OnInit {
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }
+  addFormacion(){
+    console.log('Click en agregar Formacion');
+  }
 
 }
