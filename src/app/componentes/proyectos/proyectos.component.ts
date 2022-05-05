@@ -16,6 +16,9 @@ export class ProyectosComponent implements OnInit {
     this.proyectosList=data.proyectos})
 
   }
+  addProyecto(){
+    console.log('Click en agregar Proyecto');
+  }
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }

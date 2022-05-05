@@ -16,6 +16,9 @@ export class HabilidadesComponent implements OnInit {
     this.habilidadesList=data.habilidades})
 
   }
+  addHabilidad(){
+    console.log('Click en agregar Habilidad');
+  }
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }

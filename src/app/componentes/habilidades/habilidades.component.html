@@ -1,7 +1,7 @@
 <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded">
     <div class="enc-card">
         <h3>Habilidades</h3>
-        <i class="bi bi-plus-circle-fill" *ngIf="logIn"></i>
+        <app-agregar-formacion *ngIf="logIn" (btnClick)="addHabilidad()"></app-agregar-formacion>
     </div>
     <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded" id="habilidades">
         <ul>

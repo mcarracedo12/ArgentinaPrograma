@@ -1,8 +1,7 @@
 <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded">
     <div class="enc-card">
         <h3>Experiencia</h3>
-        <app-agregar-formacion *ngIf="logIn"></app-agregar-formacion>
-        <!-- <i class="bi bi-plus-circle-fill" *ngIf="logIn"></i> -->
+        <app-agregar-formacion *ngIf="logIn" (btnClick)="addExperiencia()"></app-agregar-formacion>
     </div>
     <ul>
         <li *ngFor="let experiencia of experienciasList" class="item grid" id="experiencia">

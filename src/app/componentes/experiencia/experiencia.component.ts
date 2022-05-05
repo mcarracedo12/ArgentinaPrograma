@@ -17,6 +17,9 @@ export class ExperienciaComponent implements OnInit {
 
   }
 
+  addExperiencia(){
+    console.log('Click en agregar Experiencia');
+  }
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }
