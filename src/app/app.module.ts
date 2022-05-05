@@ -15,7 +15,9 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { LoginComponent } from './componentes/login/login.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AgregarFormacionComponent } from './componentes/educacion/agregar-formacion/agregar-formacion.component';
+import { AgregarComponent } from './componentes/agregar/agregar.component';
+import { ModificarComponent } from './componentes/modificar/modificar.component';
+import { BorrarComponent } from './componentes/borrar/borrar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AgregarFormacionComponent } from './componentes/educacion/agregar-forma
     HabilidadesComponent,
     ProyectosComponent,
     LoginComponent,
-    AgregarFormacionComponent
+    AgregarComponent,
+    ModificarComponent,
+    BorrarComponent
   ],
   imports: [
     BrowserModule, 

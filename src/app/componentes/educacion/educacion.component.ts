@@ -25,5 +25,11 @@ export class EducacionComponent implements OnInit {
   addFormacion(){
     console.log('Click en agregar Formacion');
   }
+  modificarFormacion(){
+    console.log('Click en Modificar Formacion');
+  }
+  borrarFormacion(){
+    console.log('Click en Borrar Formacion');
+  }
 
 }

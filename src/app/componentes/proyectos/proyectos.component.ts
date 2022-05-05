@@ -19,6 +19,12 @@ export class ProyectosComponent implements OnInit {
   addProyecto(){
     console.log('Click en agregar Proyecto');
   }
+  modificarProyecto(){
+    console.log("Click en Modificar Proyecto");
+  }
+  borrarProyecto(){
+    console.log("Click en Borrar Proyecto");
+  }
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }

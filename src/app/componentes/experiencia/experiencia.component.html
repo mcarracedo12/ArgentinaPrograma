@@ -1,7 +1,7 @@
 <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded">
     <div class="enc-card">
         <h3>Experiencia</h3>
-        <app-agregar-formacion *ngIf="logIn" (btnClick)="addExperiencia()"></app-agregar-formacion>
+        <app-agregar *ngIf="logIn" (btnClick)="addExperiencia()"></app-agregar>
     </div>
     <ul>
         <li *ngFor="let experiencia of experienciasList" class="item grid" id="experiencia">
@@ -20,8 +20,10 @@
             </div>
 
             <div class="icons g-col-6 g-col-md-3" *ngIf="logIn">
-                <i class="bi bi-pencil-fill"></i>
-                <i class="bi bi-trash3-fill"></i>
+                <!-- <i class="bi bi-pencil-fill"></i>
+                <i class="bi bi-trash3-fill"></i> -->
+                <app-modificar (btnClick)="modificarExperiencia()"></app-modificar>
+                <app-borrar (btnClick)="borrarExperiencia()"></app-borrar>
 
             </div>
         </li>

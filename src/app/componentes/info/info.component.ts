@@ -20,5 +20,11 @@ export class InfoComponent implements OnInit {
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }
+  modificarFoto(){
+    console.log("Click en Modificar Foto");
+  }
+  modificarDatos(){
+    console.log("Click en Modificar Datos");
+  }
 }
 

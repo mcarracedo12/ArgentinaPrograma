@@ -1,7 +1,7 @@
 <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded" id="formacion">
   <div class="enc-card">
     <h3>Formacion</h3>
-    <app-agregar-formacion *ngIf="logIn" (btnClick)="addFormacion()"></app-agregar-formacion>
+    <app-agregar *ngIf="logIn" (btnClick)="addFormacion()"></app-agregar>
 </div>
 
   <ul>
@@ -21,8 +21,10 @@
       </div>
 
       <div class="img icons g-col-6 g-col-md-3" *ngIf="logIn">
-        <i class="bi bi-pencil-fill"></i>
-        <i class="bi bi-trash3-fill"></i>
+        <app-modificar (btnClick)="modificarFormacion()"></app-modificar>
+        <!-- <i class="bi bi-pencil-fill"></i> -->
+        <!-- <i class="bi bi-trash3-fill"></i> -->
+        <app-borrar (btnClick)="borrarFormacion()"></app-borrar>
 
       </div>
     </li>

@@ -19,6 +19,12 @@ export class HabilidadesComponent implements OnInit {
   addHabilidad(){
     console.log('Click en agregar Habilidad');
   }
+  modificarHabilidad(){
+    console.log("Click en Modificar Habilidad");
+  }
+  borrarHabilidad(){
+    console.log("Click en Borrar Habilidad");
+  }
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }

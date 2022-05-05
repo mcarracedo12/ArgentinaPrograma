@@ -20,4 +20,7 @@ export class SobreMiComponent implements OnInit {
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }
+  modificarAbout(){
+    console.log("Click en Modificar Sobre mi...");
+  }
 }

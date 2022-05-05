@@ -1,12 +1,12 @@
 <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded">
     <div class="enc-card">
         <h3>Habilidades</h3>
-        <app-agregar-formacion *ngIf="logIn" (btnClick)="addHabilidad()"></app-agregar-formacion>
+        <app-agregar *ngIf="logIn" (btnClick)="addHabilidad()"></app-agregar>
     </div>
     <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded" id="habilidades">
         <ul>
             <li *ngFor="let habilidad of habilidadesList">
-                {{habilidad.habilidad}} {{habilidad.porcentaje}}%
+                {{habilidad.habilidad}} - {{habilidad.porcentaje}}%
                 <div class="progress">
                     
                     <div class="progress-bar progress-bar-striped" role="progressbar" style="width: {{habilidad.porcentaje}}%"
@@ -15,8 +15,10 @@
                 </div>
 
                 <div class="icons g-col-6 g-col-md-3" *ngIf="logIn">
-                    <i class="bi bi-pencil-fill"></i>
-                    <i class="bi bi-trash3-fill"></i>
+                    <!-- <i class="bi bi-pencil-fill"></i>
+                    <i class="bi bi-trash3-fill"></i> -->
+                    <app-modificar (btnClick)="modificarHabilidad()"></app-modificar>
+                    <app-borrar (btnClick)="borrarHabilidad()"></app-borrar>
                     
                 </div>
 

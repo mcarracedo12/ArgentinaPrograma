@@ -23,4 +23,10 @@ export class ExperienciaComponent implements OnInit {
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }
+  modificarExperiencia(){
+    console.log("Click en Modificar Experiencia");
+  }
+  borrarExperiencia(){
+    console.log("Click en Borrar Experiencia");
+  }
 }

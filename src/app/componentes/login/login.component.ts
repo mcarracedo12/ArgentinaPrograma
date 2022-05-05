@@ -40,8 +40,8 @@ export class LoginComponent implements OnInit {
     email:new FormControl,
     password:new FormControl
   });
-  email="marinacarracedo14@gmail.com";
-  password="123";
+  email="";
+  password="";
   // private authService:AuthService, 
   constructor(private authservice:AuthService, public formBuilder:FormBuilder) {
     this.form=this.formBuilder.group({
@@ -53,21 +53,21 @@ export class LoginComponent implements OnInit {
     //el servicio authService ya redirecciona en caso de inicio de sesion positivo
     // this.login(this.email, this.password)
     this.authservice.login(this.email, this.password)
-    // console.log;
+    console.log(this.email + "y" + this.password);
   }
   ngOnInit(){}
-  // get Password(){
-  //   return this.form.get("password");
-  // }
-  // get Mail(){
-  //  return this.form.get("email");
-  // }
-  // get PasswordValid(){
-  //   return this.Password?.touched && !this.Password?.valid;
-  // }
-  // get MailValid() {
-  //   return false
-  // }
+  get Password(){
+    return this.form.get("password");
+  }
+  get Mail(){
+   return this.form.get("email");
+  }
+  get PasswordValid(){
+    return this.Password?.touched && !this.Password?.valid;
+  }
+  get MailValid() {
+    return false
+  }
   onEnviar(event: Event){
     // Detenemos la propagación o ejecución del compotamiento submit de un form
     event.preventDefault; 

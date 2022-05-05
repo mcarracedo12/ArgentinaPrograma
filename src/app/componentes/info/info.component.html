@@ -2,7 +2,8 @@
 
     <div>
         <img class="position-relative profile-img" alt="imagen" [src]='infoData.img'/>
-        <i class="bi bi-pencil-fill" *ngIf="logIn"></i>
+        <!-- <i class="bi bi-pencil-fill" *ngIf="logIn"></i> -->
+        <app-modificar *ngIf="logIn" (btnClick)="modificarFoto()"></app-modificar>
     </div>
     <div>
         <div>
@@ -25,7 +26,9 @@
             </div>
         </div>
         <div>
-            <i class="bi bi-pencil-fill" *ngIf="logIn"></i>
+            <!-- <i class="bi bi-pencil-fill" ></i>
+             -->
+             <app-modificar *ngIf="logIn" (btnClick)="modificarDatos()"></app-modificar>
         </div>
         
     </div>
