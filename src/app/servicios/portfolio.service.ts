@@ -1,16 +1,22 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHandler } from '@angular/common/http';
+import { Observable,of } from 'rxjs';
+import { Proyecto } from 'src/assets/data/proyecto';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class PortfolioService {
+  private apiUrl = "http://localhost:3000/profile";
+  // HABILIDADES:Habilidad[]=[ ];
+  PROYECTOS:Proyecto[]=[ ];
+  // HABILIDADES:Habilidad[]=[ ];
+  constructor(private http: HttpClient) { }
 
-  constructor(private http:HttpClient) { }
-
-  obtenerDatos():Observable<any>{
-    return this.http.get('./assets/data/data.json');
+  obtenerDatos(): Observable<any> {
+    return this.http.get<any>(this.apiUrl);
   }
+  
 }
 

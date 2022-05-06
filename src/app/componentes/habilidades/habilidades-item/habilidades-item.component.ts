@@ -19,7 +19,7 @@ export class HabilidadesItemComponent implements OnInit {
     console.log("Click en Modificar Habilidad");
   }
   borrarHabilidad(){
-    console.log("Click en Borrar Habilidad");
+    console.log("Click en Borrar Habilidad " + this.habilidad.habilidad);
   }
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);

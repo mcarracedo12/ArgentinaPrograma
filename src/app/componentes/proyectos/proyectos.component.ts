@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Proyecto } from '../../../assets/data/proyecto';
-import { PROYECTOS } from '../../../assets/data/mock-proyecto';
-import { ProyectosService } from '../../servicios/proyectos.service';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
+
 
 
 @Component({
@@ -9,21 +9,20 @@ import { ProyectosService } from '../../servicios/proyectos.service';
   templateUrl: './proyectos.component.html',
   styleUrls: ['./proyectos.component.css']
 })
+
+
 export class ProyectosComponent implements OnInit {
-  proyectos:Proyecto[]=[];
-  constructor(private proyectoService:ProyectosService) { }
-
+  proyectos: Proyecto[] = [];
+  constructor(private obtenerDatos: PortfolioService) { }
   ngOnInit(): void {
-    this.proyectoService.getProyecto().subscribe(proyectos=>{
+    this.obtenerDatos.obtenerDatos().subscribe(data => {
       // console.log(data);
-    this.proyectos=proyectos})
-
+      this.proyectos = data.proyectos})
   }
-  addProyecto(){
+  addProyecto() {
     console.log('Click en agregar Proyecto');
   }
-  
-  public get logIn(): boolean{
-    return(localStorage.getItem('token')!==null);
+  public get logIn(): boolean {
+    return (localStorage.getItem('token') !== null);
   }
 }
