@@ -21,6 +21,7 @@ import { BorrarComponent } from './componentes/borrar/borrar.component';
 import { ExperienciaItemComponent } from './componentes/experiencia/experiencia-item/experiencia-item.component';
 import { EducacionItemComponent } from './componentes/educacion/educacion-item/educacion-item.component';
 import { HabilidadesItemComponent } from './componentes/habilidades/habilidades-item/habilidades-item.component';
+import { ProyectoItemComponent } from './componentes/proyectos/proyecto-item/proyecto-item.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HabilidadesItemComponent } from './componentes/habilidades/habilidades-
     BorrarComponent,
     ExperienciaItemComponent,
     EducacionItemComponent,
-    HabilidadesItemComponent
+    HabilidadesItemComponent,
+    ProyectoItemComponent
   ],
   imports: [
     BrowserModule, 

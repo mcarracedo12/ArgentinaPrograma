@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Proyecto } from '../../../assets/data/proyecto';
+import { PROYECTOS } from '../../../assets/data/mock-proyecto';
+import { ProyectosService } from '../../servicios/proyectos.service';
+
 
 @Component({
   selector: 'app-proyectos',
@@ -7,24 +10,19 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-  proyectosList: any
-  constructor(private obtenerDatos:PortfolioService) { }
+  proyectos:Proyecto[]=[];
+  constructor(private proyectoService:ProyectosService) { }
 
   ngOnInit(): void {
-    this.obtenerDatos.obtenerDatos().subscribe(data=>{
+    this.proyectoService.getProyecto().subscribe(proyectos=>{
       // console.log(data);
-    this.proyectosList=data.proyectos})
+    this.proyectos=proyectos})
 
   }
   addProyecto(){
     console.log('Click en agregar Proyecto');
   }
-  modificarProyecto(){
-    console.log("Click en Modificar Proyecto");
-  }
-  borrarProyecto(){
-    console.log("Click en Borrar Proyecto");
-  }
+  
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }
