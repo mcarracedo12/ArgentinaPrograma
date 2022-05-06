@@ -13,7 +13,7 @@
         "sobremi": "Soy una persona entusiasta, curiosa y con mucho empuje. Sueño con ser programadora",
         "formacion": [
             {
-                "institucion": "Argentiiiiiiiiiiina Programa",
+                "institucion": "Argentina Programa",
                 "link": "https://argentinaprograma.inti.gob.ar/",
                 "img": "https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/sliderimage1/1647226457/Banner4.png",
                 "inicio": "2021",
@@ -39,7 +39,7 @@
         ],
         "experiencias": [
             {
-                "empresa": "Acceeeeeeeeeenture Arg SA",
+                "empresa": "Accenture Arg SA",
                 "inicio": "2021",
                 "fin": "2022",
                 "puesto": "Testing Automation",
@@ -112,7 +112,7 @@
         ],
         "habilidades": [
             {
-                "habilidad": "Gestiiiiiiiiiiiion de proyectos",
+                "habilidad": "Gestion de proyectos",
                 "porcentaje": "90"
             },
             {
@@ -142,7 +142,7 @@
         ],
         "proyectos": [
             {
-                "nombre": "Deliiiiilah Resto",
+                "nombre": "Delilah Resto",
                 "descripcion": "Proyecto de Back End realizado en Acamica",
                 "anio": "2020"
             },

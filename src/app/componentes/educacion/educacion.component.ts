@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { AuthService } from 'src/app/servicios/auth.service';
-import { TitulosService } from 'src/app/servicios/titulos.service';
 import { Titulo } from 'src/assets/data/titulo';
-import { TITULOS } from '../../../assets/data/mock-titulos';
 
 @Component({
   selector: 'app-educacion',
@@ -13,12 +11,12 @@ import { TITULOS } from '../../../assets/data/mock-titulos';
 export class EducacionComponent implements OnInit {
   titulos: Titulo[] = [];
 
-  constructor(public authservice:AuthService, private tituloService:TitulosService) {}
+  constructor(public authservice:AuthService, private obtenerDatos:PortfolioService) {}
 
   ngOnInit(): void {
-    this.tituloService.getTitulo().subscribe(titulos=>{
+    this.obtenerDatos.obtenerDatos().subscribe(data=>{
       // console.log(data);
-    this.titulos=titulos;
+    this.titulos=data.formacion;
   });
   }
 

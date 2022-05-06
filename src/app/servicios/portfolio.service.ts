@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Observable,of } from 'rxjs';
-import { Proyecto } from 'src/assets/data/proyecto';
+
 
 
 @Injectable({
@@ -9,9 +9,7 @@ import { Proyecto } from 'src/assets/data/proyecto';
 })
 export class PortfolioService {
   private apiUrl = "http://localhost:3000/profile";
-  // HABILIDADES:Habilidad[]=[ ];
-  PROYECTOS:Proyecto[]=[ ];
-  // HABILIDADES:Habilidad[]=[ ];
+  
   constructor(private http: HttpClient) { }
 
   obtenerDatos(): Observable<any> {
