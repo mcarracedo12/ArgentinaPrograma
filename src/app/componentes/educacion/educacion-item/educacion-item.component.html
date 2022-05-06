@@ -1,0 +1,23 @@
+<li  class="item grid">
+    <!-- <div class="img g-col-6 g-col-md-2"> -->
+    <div class="img g-col-6 g-col-md-3">
+      <a href={{titulo.link}}>
+        <img src={{titulo.img}}>
+      </a>
+    </div>
+
+    <!-- <div class="descripcion g-col-6 g-col-md-3"> -->
+    <div class="descripcion col-8">
+      <h4>{{titulo.institucion}}</h4>
+      <p>{{titulo.inicio}} - {{titulo.fin}}</p>
+      <h5>{{titulo.carrera}}</h5>
+    </div>
+
+    <div class="img icons g-col-6 g-col-md-3" *ngIf="logIn">
+      <app-modificar (btnClick)="modificarFormacion()"></app-modificar>
+      <!-- <i class="bi bi-pencil-fill"></i> -->
+      <!-- <i class="bi bi-trash3-fill"></i> -->
+      <app-borrar (btnClick)="borrarFormacion()"></app-borrar>
+
+    </div>
+  </li>

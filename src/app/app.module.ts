@@ -19,6 +19,7 @@ import { AgregarComponent } from './componentes/agregar/agregar.component';
 import { ModificarComponent } from './componentes/modificar/modificar.component';
 import { BorrarComponent } from './componentes/borrar/borrar.component';
 import { ExperienciaItemComponent } from './componentes/experiencia/experiencia-item/experiencia-item.component';
+import { EducacionItemComponent } from './componentes/educacion/educacion-item/educacion-item.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ExperienciaItemComponent } from './componentes/experiencia/experiencia-
     AgregarComponent,
     ModificarComponent,
     BorrarComponent,
-    ExperienciaItemComponent
+    ExperienciaItemComponent,
+    EducacionItemComponent
   ],
   imports: [
     BrowserModule, 

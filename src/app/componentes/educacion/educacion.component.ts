@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+// import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { AuthService } from 'src/app/servicios/auth.service';
+import { TitulosService } from 'src/app/servicios/titulos.service';
+import { Titulo } from 'src/assets/data/titulo';
+import { TITULOS } from '../../../assets/data/mock-titulos';
 
 @Component({
   selector: 'app-educacion',
@@ -8,14 +11,14 @@ import { AuthService } from 'src/app/servicios/auth.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  educacionList:any;
+  titulos: Titulo[] = [];
 
-  constructor(private obtenerDatos:PortfolioService, public authservice:AuthService) {}
+  constructor(public authservice:AuthService, private tituloService:TitulosService) {}
 
   ngOnInit(): void {
-    this.obtenerDatos.obtenerDatos().subscribe(data=>{
+    this.tituloService.getTitulo().subscribe(titulos=>{
       // console.log(data);
-    this.educacionList=data.formacion;
+    this.titulos=titulos;
   });
   }
 
@@ -25,11 +28,6 @@ export class EducacionComponent implements OnInit {
   addFormacion(){
     console.log('Click en agregar Formacion');
   }
-  modificarFormacion(){
-    console.log('Click en Modificar Formacion');
-  }
-  borrarFormacion(){
-    console.log('Click en Borrar Formacion');
-  }
+  
 
 }
