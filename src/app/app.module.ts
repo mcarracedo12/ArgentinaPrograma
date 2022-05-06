@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AgregarComponent } from './componentes/agregar/agregar.component';
 import { ModificarComponent } from './componentes/modificar/modificar.component';
 import { BorrarComponent } from './componentes/borrar/borrar.component';
+import { ExperienciaItemComponent } from './componentes/experiencia/experiencia-item/experiencia-item.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BorrarComponent } from './componentes/borrar/borrar.component';
     LoginComponent,
     AgregarComponent,
     ModificarComponent,
-    BorrarComponent
+    BorrarComponent,
+    ExperienciaItemComponent
   ],
   imports: [
     BrowserModule, 

@@ -3,29 +3,8 @@
         <h3>Experiencia</h3>
         <app-agregar *ngIf="logIn" (btnClick)="addExperiencia()"></app-agregar>
     </div>
-    <ul>
-        <li *ngFor="let experiencia of experienciasList" class="item grid" id="experiencia">
+    <ul>   
+            <app-experiencia-item  *ngFor="let experiencia of experiencias" [experiencia]="experiencia"></app-experiencia-item>
 
-            <div class="img g-col-6 g-col-md-3">
-                <a href={{experiencia.link}}>
-                    <img src={{experiencia.img}}>
-                </a>
-            </div>
-
-            <!-- <div class="descripcion g-col-6 g-col-md-3"> -->
-            <div class="descripcion col-8">
-                <h4>{{experiencia.empresa}}</h4>
-                <p>{{experiencia.inicio}} - {{experiencia.fin}}</p>
-                <h5>{{experiencia.puesto}}</h5>
-            </div>
-
-            <div class="icons g-col-6 g-col-md-3" *ngIf="logIn">
-                <!-- <i class="bi bi-pencil-fill"></i>
-                <i class="bi bi-trash3-fill"></i> -->
-                <app-modificar (btnClick)="modificarExperiencia()"></app-modificar>
-                <app-borrar (btnClick)="borrarExperiencia()"></app-borrar>
-
-            </div>
-        </li>
     </ul>
 </div>

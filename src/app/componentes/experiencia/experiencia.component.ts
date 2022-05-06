@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+// import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { EXPERIENCIAS } from 'src/assets/data/mock-exp';
+import { ExperienciaService } from 'src/app/servicios/experiencia.service';
+import { experiencia } from 'src/assets/data/experiencia';
+
 
 @Component({
   selector: 'app-experiencia',
@@ -7,26 +11,22 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  experienciasList: any
-  constructor(private obtenerDatos:PortfolioService) { }
+  experiencias:experiencia[]=[];
+  constructor(private experienciaService:ExperienciaService) { }
 
   ngOnInit(): void {
-    this.obtenerDatos.obtenerDatos().subscribe(data=>{
+    this.experienciaService.getExperiencia().subscribe(experiencias=>[
       // console.log(data);
-    this.experienciasList=data.experiencias})
-
+    this.experiencias=experiencias])
   }
 
   addExperiencia(){
     console.log('Click en agregar Experiencia');
   }
+
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }
-  modificarExperiencia(){
-    console.log("Click en Modificar Experiencia");
-  }
-  borrarExperiencia(){
-    console.log("Click en Borrar Experiencia");
-  }
+  
+  
 }
