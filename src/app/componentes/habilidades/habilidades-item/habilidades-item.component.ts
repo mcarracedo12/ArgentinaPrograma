@@ -21,7 +21,7 @@ export class HabilidadesItemComponent implements OnInit {
   }
   borrarHabilidad(){
     console.log("Click en Borrar Habilidad " + this.habilidad.habilidad);
-    console.log("Click en Borrar Proyecto" + this.habilidad + this.habilidad.id);
+    console.log("Click en Borrar Habilidad" + this.habilidad + this.habilidad.id);
     this.deleteHabilidad.emit(this.habilidad)
   }
   public get logIn(): boolean{

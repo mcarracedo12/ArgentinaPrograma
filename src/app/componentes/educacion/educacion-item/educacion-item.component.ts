@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TITULOS } from '../../../../assets/data/mock-titulos';
 import { Titulo } from 'src/assets/data/titulo';
 
@@ -10,6 +10,7 @@ import { Titulo } from 'src/assets/data/titulo';
 })
 export class EducacionItemComponent implements OnInit {
 @Input()titulo:Titulo=TITULOS[0];
+@Output()deleteTitulo:EventEmitter<Titulo>= new EventEmitter;
   constructor() { }
 
   ngOnInit(): void {
@@ -19,7 +20,8 @@ export class EducacionItemComponent implements OnInit {
     console.log('Click en Modificar Formacion');
   }
   borrarFormacion(){
-    console.log('Click en Borrar Formacion');
+    console.log("Click en Borrar Titulo" + this.titulo.carrera + this.titulo.id);
+    this.deleteTitulo.emit(this.titulo);
   }
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);

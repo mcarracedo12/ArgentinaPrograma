@@ -4,7 +4,7 @@
         <app-agregar *ngIf="logIn" (btnClick)="addExperiencia()"></app-agregar>
     </div>
     <ul>   
-            <app-experiencia-item  *ngFor="let experiencia of experiencias" [experiencia]="experiencia"></app-experiencia-item>
+            <app-experiencia-item  *ngFor="let experiencia of experiencias" [experiencia]="experiencia" (deleteExperiencia)="borrarExperiencia(experiencia)"></app-experiencia-item>
 
     </ul>
 </div>

@@ -5,7 +5,7 @@
 </div>
 
   <ul>
-    <app-educacion-item  *ngFor="let titulo of titulos" [titulo]="titulo"></app-educacion-item>
+    <app-educacion-item  *ngFor="let titulo of titulos" [titulo]="titulo" (deleteTitulo)="borrarTitulo(titulo)"></app-educacion-item>
     
   </ul>
 
