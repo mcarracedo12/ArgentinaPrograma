@@ -17,14 +17,23 @@ export class ProyectosComponent implements OnInit {
   ngOnInit(): void {
     this.obtenerDatos.obtenerDatos().subscribe(data => {
       // console.log(data);
-      this.proyectos = data.proyectos})
+      this.proyectos = data.proyectos
+    })
   }
   addProyecto() {
     console.log('Click en agregar Proyecto');
   }
-  borrarProyecto(proyecto:Proyecto){
-      this.proyectos=this.proyectos.filter(p=>p.id!=proyecto.id)
+
+  borrarProyecto(proyecto: Proyecto) {
+    this.proyectos=this.proyectos.filter(p=>p.id!=proyecto.id);
+    this.obtenerDatos.borrarProyecto(proyecto).subscribe(() => {
+      console.log("Borrando proyecto ... " + proyecto); // Aca no llega
+      this.proyectos=this.proyectos.filter(p=>p.id!=proyecto.id);
+      // data.proyectos = this.proyectos;
+    })
   }
+
+
 
   public get logIn(): boolean {
     return (localStorage.getItem('token') !== null);

@@ -22,8 +22,13 @@ export class ExperienciaComponent implements OnInit {
     console.log('Click en agregar Experiencia');
   }
   borrarExperiencia(experiencia:experiencia){
-      this.experiencias=this.experiencias.filter(p=>p.id!=experiencia.id)
+      this.experiencias=this.experiencias.filter(p=>p.id!=experiencia.id);
+      this.obtenerDatos.borrarExperiencia(experiencia).subscribe(()=>{
+        console.log("Borrando Experiencia... " + experiencia); // Aca no llega
+        this.experiencias=this.experiencias.filter(e=>e.id!=experiencia.id);
+      })
   }
+
 
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);

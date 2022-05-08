@@ -27,7 +27,11 @@ export class EducacionComponent implements OnInit {
     console.log('Click en agregar Formacion');
   }
   borrarTitulo(titulo:Titulo){
-      this.titulos=this.titulos.filter(p=>p.id!=titulo.id)
+      this.titulos=this.titulos.filter(p=>p.id!=titulo.id);
+      this.obtenerDatos.borrarTitulo(titulo).subscribe(()=>{
+        console.log("Borrando Titulo... " + titulo); // Aca no llega
+        this.titulos=this.titulos.filter(t=>t.id!=titulo.id);
+      })
   }
   
 
