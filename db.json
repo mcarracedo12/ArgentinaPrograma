@@ -181,6 +181,13 @@
                 "descripcion": "Proyecto realizado en Acamica - Responsive web design",
                 "anio": "2020",
                 "link": "https://github.com/mcarracedo12/Podcast"
+            },
+            {
+                "id": 4,
+                "nombre": "Lista de Tareas",
+                "descripcion": "Lista de Tareas en Angular",
+                "anio": "2022",
+                "link": "https://github.com/mcarracedo12/Lista-de-Tareas"
             }
         ]
     }

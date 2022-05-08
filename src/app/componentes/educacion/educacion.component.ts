@@ -27,9 +27,7 @@ export class EducacionComponent implements OnInit {
     console.log('Click en agregar Formacion');
   }
   borrarTitulo(titulo:Titulo){
-    this.obtenerDatos.delete(titulo).subscribe(()=>[
       this.titulos=this.titulos.filter(p=>p.id!=titulo.id)
-    ])
   }
   
 
