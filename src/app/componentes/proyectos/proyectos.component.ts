@@ -22,6 +22,11 @@ export class ProyectosComponent implements OnInit {
   addProyecto() {
     console.log('Click en agregar Proyecto');
   }
+  borrarProyecto(proyecto:Proyecto){
+    this.obtenerDatos.delete(proyecto).subscribe(()=>[
+      this.proyectos=this.proyectos.filter(p=>p.id!=proyecto.id)
+    ])
+  }
   public get logIn(): boolean {
     return (localStorage.getItem('token') !== null);
   }

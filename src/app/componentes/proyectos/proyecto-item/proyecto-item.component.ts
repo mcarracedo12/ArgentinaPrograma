@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Proyecto } from '../../../../assets/data/proyecto';
 import { PROYECTOS } from '../../../../assets/data/mock-proyecto';
 
@@ -11,15 +11,17 @@ import { PROYECTOS } from '../../../../assets/data/mock-proyecto';
 })
 export class ProyectoItemComponent implements OnInit {
 @Input()proyecto:Proyecto=PROYECTOS[0]
+@Output() deleteProyecto:EventEmitter<Proyecto>=new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
   }
   modificarProyecto(){
-    console.log("Click en Modificar Proyecto");
+    console.log("Click en Modificar Proyecto" + this.proyecto);
   }
   borrarProyecto(){
-    console.log("Click en Borrar Proyecto");
+    console.log("Click en Borrar Proyecto" + this.proyecto + this.proyecto.id);
+    this.deleteProyecto.emit(this.proyecto)
   }
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);

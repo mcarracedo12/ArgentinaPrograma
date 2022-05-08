@@ -6,7 +6,7 @@
     <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded" id="proyectos">
         <ul>
 
-            <app-proyecto-item *ngFor="let proyecto of proyectos" [proyecto]="proyecto"></app-proyecto-item>
+            <app-proyecto-item *ngFor="let proyecto of proyectos" [proyecto]="proyecto" (deleteProyecto)="borrarProyecto(proyecto)"></app-proyecto-item>
 
             
 

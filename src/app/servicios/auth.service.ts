@@ -32,7 +32,7 @@ import { PortfolioService } from './portfolio.service';
 
 
 export class AuthService {
-  url = 'http://localhost:3000/api'; //La url que corresponda
+  url = 'http://localhost:3000/profile'; //La url que corresponda
   // token;
   constructor(private obtenerDatos: PortfolioService, private http: HttpClient) { }
 

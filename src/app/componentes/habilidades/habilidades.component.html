@@ -5,7 +5,7 @@
     </div>
     <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded" id="habilidades">
         <ul>
-            <app-habilidades-item *ngFor="let habilidad of habilidades" [habilidad]="habilidad">
+            <app-habilidades-item *ngFor="let habilidad of habilidades" [habilidad]="habilidad" (deleteHabilidad)="borrarHabilidad(habilidad)">
                 
             </app-habilidades-item>
         </ul>

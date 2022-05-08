@@ -21,7 +21,11 @@ export class HabilidadesComponent implements OnInit {
   addHabilidad(){
     console.log('Click en agregar Habilidad');
   }
-  
+  borrarHabilidad(habilidad:Habilidad){
+    this.obtenerDatos.delete(habilidad).subscribe(()=>[
+      this.habilidades=this.habilidades.filter(p=>p.id!=habilidad.id)
+    ])
+  }
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }

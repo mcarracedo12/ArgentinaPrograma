@@ -1,5 +1,6 @@
 export interface experiencia 
     {
+        id: number;
         empresa: string;
         inicio: string;
         fin: string;

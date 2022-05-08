@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Habilidad } from 'src/assets/data/habilidad';
 import { HABILIDADES } from '../../../../assets/data/mock-habilidad';
 
@@ -10,6 +10,7 @@ import { HABILIDADES } from '../../../../assets/data/mock-habilidad';
 })
 export class HabilidadesItemComponent implements OnInit {
 @Input()habilidad:Habilidad=HABILIDADES[0];
+@Output() deleteHabilidad:EventEmitter<Habilidad>=new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
@@ -20,6 +21,8 @@ export class HabilidadesItemComponent implements OnInit {
   }
   borrarHabilidad(){
     console.log("Click en Borrar Habilidad " + this.habilidad.habilidad);
+    console.log("Click en Borrar Proyecto" + this.habilidad + this.habilidad.id);
+    this.deleteHabilidad.emit(this.habilidad)
   }
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
