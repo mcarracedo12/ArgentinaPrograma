@@ -22,7 +22,6 @@ export class ExperienciaComponent implements OnInit {
 
   addExperiencia(){
     console.log('Click en agregar Experiencia');
-    
   }
   borrarExperiencia(experiencia:experiencia){
       this.experiencias=this.experiencias.filter(p=>p.id!=experiencia.id);

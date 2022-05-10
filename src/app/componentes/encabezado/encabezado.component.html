@@ -20,9 +20,29 @@
           <i class="bi bi-github"></i>
         </a>
       </span>
-      <button type="button" class="btn btn-info" routerLink="login" routerLinkActive="active" *ngIf="!logIn">
+      
+      <button type="button" class="btn btn-info" routerLink="login" routerLinkActive="active" *ngIf="!logIn" (click)="showModal=true">
            Login
       </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Inicie sesión</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            (click)="showModal=false">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <app-login></app-login>
+                </div>
+            </div>
+        </div>
+
+
       <button type="button" class="btn btn-info" *ngIf="logIn" (click)="logout()" href="#" >
           Logout
       </button>

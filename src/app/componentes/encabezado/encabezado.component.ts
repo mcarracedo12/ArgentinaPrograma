@@ -10,8 +10,7 @@ import { AuthService } from 'src/app/servicios/auth.service';
 })
 export class EncabezadoComponent implements OnInit {
   portfolio:any;
-  
-  // constructor(private obtenerDatos:PortfolioService) {}
+  showModal:Boolean=false;
   constructor(public obtenerDatos: PortfolioService){}
 
   ngOnInit(): void {
@@ -21,12 +20,14 @@ export class EncabezadoComponent implements OnInit {
 
   }
   
-  public login(email:string, password:string){
-    if(email==this.portfolio.contacto && password==this.portfolio.contrasenia) {
-        // Guardamos el token en local storage
-        localStorage.setItem('token', 'logueado');
-      }
-    }
+  // public login(email:string, password:string){
+  //   if(email==this.portfolio.contacto && password==this.portfolio.contrasenia) {
+  //       // Guardamos el token en local storage
+  //       localStorage.setItem('token', 'logueado');
+  //     }
+  //   }
+
+  
   public logout(){
     localStorage.removeItem("token");
   }
