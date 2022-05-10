@@ -1,10 +1,31 @@
 <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded">
     <div class="enc-card">
         <h3>Experiencia</h3>
-        <app-agregar *ngIf="logIn" (btnClick)="addExperiencia()"></app-agregar>
+        <!-- Button trigger modal -->
+        <app-agregar *ngIf="logIn" (btnClick)="showModal=true" data-toggle="modal" data-target="#exampleModal">
+        </app-agregar>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Agregue una experiencia</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            (click)="showModal=false">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <app-form-experiencia></app-form-experiencia>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <ul>   
-            <app-experiencia-item  *ngFor="let experiencia of experiencias" [experiencia]="experiencia" (deleteExperiencia)="borrarExperiencia(experiencia)"></app-experiencia-item>
+    <ul>
+        <app-experiencia-item *ngFor="let experiencia of experiencias" [experiencia]="experiencia"
+            (deleteExperiencia)="borrarExperiencia(experiencia)"></app-experiencia-item>
 
     </ul>
 </div>

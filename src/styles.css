@@ -154,3 +154,24 @@ li{
     width: 50px;
     height: 50px;
 }
+.modal.show{
+    display: block;
+}
+.col-form-label {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 10px;
+    font-size: inherit;
+    line-height: 1.5;
+    color: blueviolet;
+    font-weight: 500;
+}
+.modal-content {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    background-color: cornflowerblue;
+}
+.btn{
+    margin:10px;
+}

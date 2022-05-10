@@ -10,16 +10,19 @@ import { experiencia } from 'src/assets/data/experiencia';
 })
 export class ExperienciaComponent implements OnInit {
   experiencias:experiencia[]=[];
+  showModal:Boolean=false;
   constructor(private obtenerDatos:PortfolioService) { }
 
   ngOnInit(): void {
     this.obtenerDatos.obtenerDatos().subscribe(data=>{
       // console.log(data);
     this.experiencias=data.experiencias})
+    
   }
 
   addExperiencia(){
     console.log('Click en agregar Experiencia');
+    
   }
   borrarExperiencia(experiencia:experiencia){
       this.experiencias=this.experiencias.filter(p=>p.id!=experiencia.id);
