@@ -1,1 +1,11 @@
-<p>form-habilidad works!</p>
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <label for="habilidad" class="col-form-label">
+        Habilidad:
+    </label>
+    <input class="form-control" type="habilidad" formControlName="habilidad" placeholder="Ingrese habilidad">
+    <label for="porcentaje" class="col-form-label">
+        Porcentaje:
+    </label>
+    <input type="porcentaje" class="form-control" formControlName="porcentaje" placeholder="Ingrese porcentaje">
+    <button type="submit" class="btn btn-primary" (click)="onEnviar">Agregar Habilidad</button>
+</form>

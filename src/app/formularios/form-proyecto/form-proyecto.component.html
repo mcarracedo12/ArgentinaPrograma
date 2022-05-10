@@ -1,1 +1,19 @@
-<p>form-proyecto works!</p>
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <label for="nombre" class="col-form-label">
+        Proyecto:
+    </label>
+    <input class="form-control" type="nombre" formControlName="nombre" placeholder="Nombre del Proyecto">
+    <label for="descripcion" class="col-form-label">
+        Breve descripcion del proyecto:
+    </label>
+    <input type="descripcion" class="form-control" formControlName="descripcion" placeholder="Descripción...">
+    <label for="anio" class="col-form-label">
+        Año:
+    </label>
+    <input type="anio" class="form-control" formControlName="anio" placeholder="Ingrese año">
+    <label for="link" class="col-form-label">
+        Link del Proyecto:
+    </label>
+    <input type="logo" class="form-control" formControlName="logo" placeholder="Ingrese link aquí...">
+    <button type="submit" class="btn btn-primary" (click)="onEnviar">Agregar Proyecto</button>
+</form>
