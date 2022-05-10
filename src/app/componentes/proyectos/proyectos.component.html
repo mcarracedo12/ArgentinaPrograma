@@ -1,7 +1,25 @@
 <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded">
     <div class="enc-card">
         <h3>Proyectos</h3>
-        <app-agregar *ngIf="logIn" (btnClick)="addProyecto()"></app-agregar>
+        <app-agregar *ngIf="logIn" (btnClick)="addProyecto()" (btnClick)="showModal=true"></app-agregar>
+
+         <!-- Modal -->
+         <div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel">Agregue un Proyecto</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                         (click)="showModal=false">
+                         <span aria-hidden="true">&times;</span>
+                     </button>
+                 </div>
+                 <app-form-habilidad></app-form-habilidad>
+             </div>
+         </div>
+     </div>
+
     </div>
     <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded" id="proyectos">
         <ul>

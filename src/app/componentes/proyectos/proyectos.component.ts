@@ -13,6 +13,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 export class ProyectosComponent implements OnInit {
   proyectos: Proyecto[] = [];
+  showModal:boolean=false;
   constructor(private obtenerDatos: PortfolioService) { }
   ngOnInit(): void {
     this.obtenerDatos.obtenerDatos().subscribe(data => {

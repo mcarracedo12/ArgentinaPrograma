@@ -10,6 +10,7 @@ import { Titulo } from 'src/assets/data/titulo';
 })
 export class EducacionComponent implements OnInit {
   titulos: Titulo[] = [];
+  showModal:boolean=false;
 
   constructor(public authservice:AuthService, private obtenerDatos:PortfolioService) {}
 

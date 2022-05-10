@@ -9,6 +9,7 @@ import { Habilidad } from 'src/assets/data/habilidad';
 })
 export class HabilidadesComponent implements OnInit {
   habilidades: Habilidad[]=[];
+  showModal:Boolean=false;
   constructor(private obtenerDatos:PortfolioService) { }
   
 
