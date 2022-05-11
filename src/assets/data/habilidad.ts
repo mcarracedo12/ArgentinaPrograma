@@ -1,6 +1,6 @@
 export interface Habilidad 
     {
-        id: number;
+        id?: number;
         habilidad: string;
         porcentaje: number;
     }

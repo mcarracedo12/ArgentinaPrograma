@@ -32,8 +32,8 @@ export class ProyectosComponent implements OnInit {
       this.proyectos=this.proyectos.filter(p=>p.id!=proyecto.id);
       // data.proyectos = this.proyectos;
     })
+  
   }
-
 
 
   public get logIn(): boolean {

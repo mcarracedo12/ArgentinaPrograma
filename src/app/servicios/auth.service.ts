@@ -46,14 +46,14 @@ export class AuthService {
     })
   }
 
-  login(email: string, password: any) {
+  // login(email: string, password: any) {
     // email = "marinacarracedo14@gmail.com";
     // password = 123;
-    if (email == this.portfolioDatos.contacto && password == this.portfolioDatos.contrasenia) {
+    // if (email == this.portfolioDatos.contacto && password == this.portfolioDatos.contrasenia) {
       // Guardamos el token en local storage
-      localStorage.setItem('token', 'logueado');
-    }
-  }
+      // localStorage.setItem('token', 'logueado');
+    // }
+  // }
   // logout(){
   //   localStorage.removeItem('token');
   // }
