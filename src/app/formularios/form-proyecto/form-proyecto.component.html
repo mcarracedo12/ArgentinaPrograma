@@ -1,19 +1,19 @@
-<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+<form (ngSubmit)="onEnviar()">
     <label for="nombre" class="col-form-label">
         Proyecto:
     </label>
-    <input class="form-control" type="nombre" formControlName="nombre" placeholder="Nombre del Proyecto">
+    <input [(ngModel)]="nombre" class="form-control" type="nombre" name="nombre" placeholder="Nombre del Proyecto">
     <label for="descripcion" class="col-form-label">
         Breve descripcion del proyecto:
     </label>
-    <input type="descripcion" class="form-control" formControlName="descripcion" placeholder="Descripción...">
+    <input [(ngModel)]="descripcion" type="descripcion" class="form-control" name="descripcion" placeholder="Descripción...">
     <label for="anio" class="col-form-label">
         Año:
     </label>
-    <input type="anio" class="form-control" formControlName="anio" placeholder="Ingrese año">
+    <input [(ngModel)]="anio" type="anio" class="form-control" name="anio" placeholder="Ingrese año">
     <label for="link" class="col-form-label">
         Link del Proyecto:
     </label>
-    <input type="logo" class="form-control" formControlName="logo" placeholder="Ingrese link aquí...">
-    <button type="submit" class="btn btn-primary" (click)="onEnviar">Agregar Proyecto</button>
+    <input [(ngModel)]="link" type="link" class="form-control" name="link" placeholder="Ingrese link aquí...">
+    <button type="submit" class="btn btn-primary">Agregar Proyecto</button>
 </form>

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Proyecto } from '../../../assets/data/proyecto';
 
 @Component({
   selector: 'app-form-proyecto',
@@ -7,29 +7,39 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./form-proyecto.component.css']
 })
 export class FormProyectoComponent implements OnInit {
-  form:FormGroup = new FormGroup({
-    id: new FormControl,
-    nombre: new FormControl,
-    descripcion: new FormControl,
-    anio: new FormControl,
-    link: new FormControl,
-  });
-
-  constructor(private formBuilder:FormBuilder) {
-    this.form=this.formBuilder.group({
-      id: ['',[]],
-      nombre: ['',[]],
-      descripcion: ['',[]],
-      anio: ['',[]],
-      link: ['',[]],
-    })
-   }
-
+  @Output() onAddProyecto: EventEmitter<Proyecto> = new EventEmitter();
+  nombre: string = "";
+  descripcion: string = "";
+  anio: string = "";
+  link: string = "";
+  constructor() { }
+  
   ngOnInit(): void {
   }
 
-  onEnviar(event: Event){
-    
-  }
+  onEnviar() {
+    const { nombre, descripcion, anio, link } = this;
+    const newProyecto = { nombre, descripcion, anio, link };
 
+    if (!this.nombre) {
+      alert("Agregar nombre del proyecto!");
+    } else {
+      if (!this.descripcion) {
+        alert("Agregar descripción del proyecto!");
+      } else {
+        if (!this.anio) {
+          alert("Agregar año de proyecto!");
+        } else {
+          if (!this.link) {
+            alert("Agregar link al proyecto!");
+          } else {
+            this.onAddProyecto.emit(newProyecto);
+            console.log(newProyecto);
+            alert("Proyecto agregado!");
+          }
+        }
+      }
+    }
+  }
 }
+

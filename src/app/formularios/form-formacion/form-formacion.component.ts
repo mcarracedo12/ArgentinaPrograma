@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Titulo } from 'src/assets/data/titulo';
 
 @Component({
   selector: 'app-form-formacion',
@@ -7,32 +7,58 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./form-formacion.component.css']
 })
 export class FormFormacionComponent implements OnInit {
-  form:FormGroup = new FormGroup({
-    id: new FormControl,
-    institucion: new FormControl,
-    inicio: new FormControl,
-    fin: new FormControl,
-    carrera: new FormControl,
-    link: new FormControl,
-    img: new FormControl,
-  });
-  constructor(private formBuilder:FormBuilder) { 
-    this.form=this.formBuilder.group({
-      id: ['',[]],
-      institucion: ['',[]],
-      inicio: ['',[]],
-      fin: ['',[]],
-      carrera: ['',[]],
-      link: ['',[]],
-      img: ['',[]],
-    })
-  }
+  @Output() onAddFormacion: EventEmitter<Titulo> = new EventEmitter();
+  // id?: number;
+  institucion: string = "";
+  inicio: string = "";
+  fin: string = "";
+  carrera: string = "";
+  link: string = "";
+  img: string = "";
+
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  onEnviar(event: Event){
-    
+  onEnviar() {
+    const { institucion, inicio, fin, carrera, link, img } = this;
+    const newFormacion = { institucion, inicio, fin, carrera, link, img };
+
+
+    if (!this.institucion) {
+      alert("Agregar institucion!");
+    } else {
+      if (!this.inicio) {
+        alert("Agregar fecha de Inicio!");
+      } else {
+        if (!this.fin) {
+          alert("Agregar fecha de finalizacion!")
+        } else {
+          if (!this.carrera) {
+            alert("Agregar carrera!")
+          } else {
+            if (!this.link) {
+              alert("Agregar link a la pagina de la empresa!")
+            } else {
+              if (!this.img) {
+                alert("Agregar link del logo de la empresa!");
+              }
+              else {
+                // const { empresa, inicio, fin, puesto, link, img } = this;
+                // const newExperiencia = { empresa, inicio, fin, puesto, link, img };
+                this.onAddFormacion.emit(newFormacion);
+                console.log(newFormacion);
+                alert("Carrera agregada!");
+              }
+            };
+          };
+        };
+      }
+    }
+
+    // this.onAddFormacion.emit(newFormacion);
+    // console.log(newFormacion);
   }
 
 }

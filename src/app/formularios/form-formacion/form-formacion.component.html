@@ -1,27 +1,27 @@
-<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+<form (ngSubmit)="onEnviar()">
     <label for="institucion" class="col-form-label">
         Institución:
     </label>
-    <input class="form-control" type="empresa" formControlName="empresa" placeholder="Empresa">
+    <input class="form-control" type="institucion" [(ngModel)]="institucion" name="institucion" placeholder="Institucion">
     <label for="inicio" class="col-form-label">
         Año de Inicio:
     </label>
-    <input type="inicio" class="form-control" formControlName="inicio" placeholder="Ingrese año">
+    <input type="inicio" class="form-control" [(ngModel)]="inicio" name="inicio" placeholder="Ingrese año">
     <label for="fin" class="col-form-label">
         Año de Finalización:
     </label>
-    <input type="fin" class="form-control" formControlName="fin" placeholder="Ingrese año">
+    <input type="fin" class="form-control" [(ngModel)]="fin" name="fin" placeholder="Ingrese año">
     <label for="carrera" class="col-form-label">
         Carrera:
     </label>
-    <input type="carrera" class="form-control" formControlName="carrera" placeholder="Carrera">
+    <input type="carrera" class="form-control" [(ngModel)]="carrera" name="carrera" placeholder="Carrera">
     <label for="link" class="col-form-label">
         Link a la Página de la Institución:
     </label>
-    <input type="link" class="form-control" formControlName="link" placeholder="Ingrese link aquí...">
+    <input type="link" class="form-control" [(ngModel)]="link" name="link" placeholder="Ingrese link aquí...">
     <label for="logo" class="col-form-label">
         Link del logo de la Institución:
     </label>
-    <input type="logo" class="form-control" formControlName="logo" placeholder="Ingrese link aquí...">
-    <button type="submit" class="btn btn-primary" (click)="onEnviar">Agregar Carrera</button>
+    <input type="logo" class="form-control" [(ngModel)]="img" name="logo" placeholder="Ingrese link aquí...">
+    <button type="submit" class="btn btn-primary">Agregar Carrera</button>
 </form>
