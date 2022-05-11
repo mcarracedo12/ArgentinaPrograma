@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+// import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { experiencia } from '../../../assets/data/experiencia';
 
 @Component({
   selector: 'app-form-experiencia',
@@ -7,31 +8,23 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./form-experiencia.component.css']
 })
 export class FormExperienciaComponent implements OnInit {
-  form:FormGroup = new FormGroup({
-    id: new FormControl,
-    empresa: new FormControl,
-    inicio: new FormControl,
-    fin: new FormControl,
-    puesto: new FormControl,
-    link: new FormControl,
-    img: new FormControl,
-  });
-  constructor(public formBuilder:FormBuilder) {
-    this.form=this.formBuilder.group({
-      id: ['',[]],
-      empresa: ['',[]],
-      inicio: ['',[]],
-      fin: ['',[]],
-      puesto: ['',[]],
-      link: ['',[]],
-      img: ['',[]],
-    })
-   }
+  @Output()onAddExperiencia:EventEmitter<experiencia>=new EventEmitter();
+  
+  // id?: number;
+  empresa: string="";
+  inicio: string="";
+  fin: string="";
+  puesto: string="";
+  link: string="";
+  img: string="";
+  
+  constructor() {}
 
   ngOnInit(): void {
   }
 
-  onEnviar(event: Event){
-    
+  onEnviar(){
+    const {empresa, inicio, fin, puesto, link, img} = this;
+    const newExperiencia = {empresa, inicio, fin, puesto, link, img};
   }
 }

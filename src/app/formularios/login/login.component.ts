@@ -85,8 +85,8 @@ import { PortfolioService } from "src/app/servicios/portfolio.service";
 })
 
 export class LoginComponent implements OnInit {
-  email:string="";
-  password:string="";
+  email: string = "";
+  password: string = "";
   showModal: Boolean = true;
   constructor(private obtenerDatos: PortfolioService) { }
 
@@ -101,20 +101,20 @@ export class LoginComponent implements OnInit {
 
 
   onEnviar() {
-  
-  if (this.email=="marinacarracedo") {
-    if(this.password=="123"){
-      localStorage.setItem('token', 'logueado');
+
+    if (this.email == "marinacarracedo") {
+      if (this.password == "123") {
+        localStorage.setItem('token', 'logueado');
+      }
+      else {
+        alert("Contraseña es 123")
+      }
     }
     else {
-      alert("Contraseña es 123")
+      alert("Usuario es marinacarracedo")
     }
+    console.log("pressed");
   }
-  else {
-    alert("Usuario es marinacarracedo")
-  }
-  console.log("pressed");
-}
 
 
   // onEnviar() {

@@ -1,29 +1,27 @@
-<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+<form (ngSubmit)="onEnviar()">
         <label for="empresa" class="col-form-label">
             Empresa:
         </label>
-            <input class="form-control" type="empresa" formControlName="empresa"
-                placeholder="Empresa">
+            <input [(ngModel)]="empresa" class="form-control" type="empresa" placeholder="Empresa">
     <label for="inicio" class="col-form-label">
         Año de Inicio:
     </label>
-    <input type="inicio" class="form-control" formControlName="inicio"
-        placeholder="Ingrese año">
+    <input [(ngModel)]="inicio" type="inicio" class="form-control" placeholder="Ingrese año">
     <label for="fin" class="col-form-label">
         Año de Finalización:
     </label>
-    <input type="fin" class="form-control" formControlName="fin" placeholder="Ingrese año">
+    <input [(ngModel)]="fin" type="fin" class="form-control" placeholder="Ingrese año">
     <label for="puesto" class="col-form-label">
         Puesto que ocupó:
     </label>
-    <input type="puesto" class="form-control" formControlName="puesto" placeholder="Puesto">
+    <input [(ngModel)]="puesto" type="puesto" class="form-control" placeholder="Puesto">
     <label for="link" class="col-form-label">
         Link a la Página de la Empresa:
     </label>
-    <input type="link" class="form-control" formControlName="link" placeholder="Ingrese link aquí...">
+    <input [(ngModel)]="link" type="link" class="form-control" placeholder="Ingrese link aquí...">
     <label for="logo" class="col-form-label">
         Link del logo de la empresa:
     </label>
-    <input type="logo" class="form-control" formControlName="logo" placeholder="Ingrese link aquí...">
-    <button type="submit" class="btn btn-primary" (click)="onEnviar">Agregar Experiencia</button>
+    <input [(ngModel)]="img" type="logo" class="form-control" placeholder="Ingrese link aquí...">
+    <button type="submit" class="btn btn-primary">Agregar Experiencia</button>
 </form>
