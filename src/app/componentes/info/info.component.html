@@ -1,35 +1,29 @@
 <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded" id="info">
 
     <div>
-        <img class="position-relative profile-img" alt="imagen" [src]='infoData.img'/>
-        <!-- <i class="bi bi-pencil-fill" *ngIf="logIn"></i> -->
-        <app-modificar *ngIf="logIn" (btnClick)="modificarFoto()"></app-modificar>
+        <img class="position-relative profile-img" alt="imagen" [src]='infoData.img' />
+        <app-modificar *ngIf="logIn" (btnClick)="modificarFoto()" (btnClick)="showFoto=true"></app-modificar>
     </div>
     <div>
-        <div>
-            <h1>{{infoData.id}}</h1>
+        <app-nombre></app-nombre>
 
-            <div id="info-titulo">
-                <h3>{{infoData.tituloactual}}</h3>
-            </div>
-            <div id="info-company">
-                <h2>{{infoData.empresa}}</h2>
-            </div>
-            <div id="info-puesto">
-                {{infoData.puesto}}
-            </div>
-            <div id="info-contact">
-                {{infoData.contacto}}
-            </div>
-            <div id="info-location">
-                {{infoData.ciudad}}, {{infoData.provincia}} ({{infoData.pais}})
-            </div>
+
+        <div id="info-titulo">
+            <h3>{{infoData.tituloactual}}</h3>
         </div>
-        <div>
-            <!-- <i class="bi bi-pencil-fill" ></i>
-             -->
-             <app-modificar *ngIf="logIn" (btnClick)="modificarDatos()"></app-modificar>
+        <div id="info-company">
+            <h2>{{infoData.empresa}}</h2>
         </div>
-        
+        <div id="info-puesto">
+            {{infoData.puesto}}
+        </div>
+        <div id="info-contact">
+            {{infoData.contacto}}
+        </div>
+        <div id="info-location">
+            {{infoData.ciudad}}, {{infoData.provincia}} ({{infoData.pais}})
+        </div>
     </div>
+
+
 </div>

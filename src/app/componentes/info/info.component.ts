@@ -8,6 +8,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class InfoComponent implements OnInit {
   infoData: any;
+  showFoto:boolean=false
+  
   constructor(private obtenerDatos: PortfolioService) {
     }
 
@@ -23,8 +25,6 @@ export class InfoComponent implements OnInit {
   modificarFoto(){
     console.log("Click en Modificar Foto");
   }
-  modificarDatos(){
-    console.log("Click en Modificar Datos");
-  }
+  
 }
 

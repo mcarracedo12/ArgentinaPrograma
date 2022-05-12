@@ -26,6 +26,8 @@ import { FormExperienciaComponent } from './formularios/form-experiencia/form-ex
 import { FormHabilidadComponent } from './formularios/form-habilidad/form-habilidad.component';
 import { FormProyectoComponent } from './formularios/form-proyecto/form-proyecto.component';
 import { FormFormacionComponent } from './formularios/form-formacion/form-formacion.component';
+import { FormDatoComponent } from './formularios/form-dato/form-dato.component';
+import { NombreComponent } from './datos/nombre/nombre.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { FormFormacionComponent } from './formularios/form-formacion/form-formac
     FormExperienciaComponent,
     FormHabilidadComponent,
     FormProyectoComponent,
-    FormFormacionComponent
+    FormFormacionComponent,
+    FormDatoComponent,
+    NombreComponent
   ],
   imports: [
     BrowserModule, 

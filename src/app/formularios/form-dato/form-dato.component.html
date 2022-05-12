@@ -1,0 +1,7 @@
+<form (ngSubmit)="onEnviar()">
+    <label for="dato" class="col-form-label">
+        Ingrese el nuevo valor:
+    </label>
+    <input [(ngModel)]="dato" class="form-control" type="dato" name="dato" placeholder="">
+    <button type="submit" class="btn btn-primary">Modificar</button>
+</form>
