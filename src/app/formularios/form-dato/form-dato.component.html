@@ -1,7 +1,35 @@
 <form (ngSubmit)="onEnviar()">
-    <label for="dato" class="col-form-label">
-        Ingrese el nuevo valor:
+    <label for="nombre" class="col-form-label">
+        Nombre completo:
     </label>
-    <input [(ngModel)]="dato" class="form-control" type="dato" name="dato" placeholder="">
+    <input [(ngModel)]="nombre" class="form-control" type="nombre" name="nombre" placeholder="Nombre completo" [defaultValue]=nombre>
+    <label for="tituloactual" class="col-form-label">
+        tituloactual:
+    </label>
+    <input [(ngModel)]="tituloactual" class="form-control" type="tituloactual" name="tituloactual" placeholder="Titulo actual" [defaultValue]=tituloactual>
+    <label for="empresa" class="col-form-label">
+        Empresa actual:
+    </label>
+    <input [(ngModel)]="empresa" class="form-control" type="empresa" name="empresa" placeholder="Empresa actual" [defaultValue]=empresa>
+    <label for="puesto" class="col-form-label">
+        Puesto actual:
+    </label>
+    <input [(ngModel)]="puesto" class="form-control" type="puesto" name="puesto" placeholder="Puesto actual" [defaultValue]=puesto>
+    <label for="contacto" class="col-form-label">
+        E-mail:
+    </label>
+    <input [(ngModel)]="contacto" class="form-control" type="contacto" name="contacto" placeholder="E-mail" [defaultValue]=contacto>
+    <label for="ciudad" class="col-form-label">
+        Ciudad:
+    </label>
+    <input [(ngModel)]="ciudad" class="form-control" type="ciudad" name="ciudad" placeholder="Ciudad" [defaultValue]=ciudad>
+    <label for="provincia" class="col-form-label">
+        Provincia:
+    </label>
+    <input [(ngModel)]="provincia" class="form-control" type="provincia" name="provincia" placeholder="Provincia" [defaultValue]=provincia>
+    <label for="pais" class="col-form-label">
+        Pais:
+    </label>
+    <input [(ngModel)]="pais" class="form-control" type="pais" name="pais" placeholder="Pais" [defaultValue]=pais>
     <button type="submit" class="btn btn-primary">Modificar</button>
 </form>
