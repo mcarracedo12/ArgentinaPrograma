@@ -20,7 +20,7 @@ const httpOptions = {
 })
 export class PortfolioService {
   private apiUrl = "http://localhost:3000/profile";
-  // private apiUrl = "http://localhost:8080/1";
+  
 
   constructor(private http: HttpClient) { }
 

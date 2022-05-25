@@ -10,6 +10,7 @@ import { Input } from '@angular/core';
 export class FormFormacionComponent implements OnInit {
   @Output() onAddFormacion: EventEmitter<Titulo> = new EventEmitter();
   @Input() titulo: Titulo = this;
+  @Output() hideModal:EventEmitter<boolean> = new EventEmitter();
     
   // id?: number;
   institucion: string = "";
@@ -18,6 +19,8 @@ export class FormFormacionComponent implements OnInit {
   carrera: string = "";
   link: string = "";
   img: string = "";
+
+  showModal:boolean=true;
 
   constructor() { }
 
@@ -59,6 +62,8 @@ export class FormFormacionComponent implements OnInit {
                 this.onAddFormacion.emit(newFormacion);
                 console.log(newFormacion);
                 alert("Carrera agregada!");
+                this.showModal=false;
+                this.hideModal.emit(this.showModal);
               }
             };
           };

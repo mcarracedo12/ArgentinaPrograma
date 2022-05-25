@@ -1,9 +1,9 @@
 <!-- <form [formGroup]="form" (ngSubmit)="onEnviar($event)"> -->
   <form (ngSubmit)="onEnviar()">
   <label for="email" class="col-sm-2 col-form-label">Email</label>
-  <input [(ngModel)]="email" type="text" name="email" class="form-control-plaintext" id="email" placeholder="Ingrese Usuario">
+  <input [(ngModel)]="email" type="text" name="email" class="form-control" id="email" placeholder="Ingrese Usuario">
   <label for="password" class="col-sm-2 col-form-label">Password</label>
   <input [(ngModel)]="password" type="password" name="password" class="form-control" id="password" placeholder="Ingrese Contraseña">
   <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-  <p>Email  {{email}} Password: {{password}} </p>
+  <!-- <p>Email  {{email}} Password: {{password}} </p> -->
 </form>

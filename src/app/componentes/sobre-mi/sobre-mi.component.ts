@@ -23,4 +23,9 @@ export class SobreMiComponent implements OnInit {
   modificarAbout() {
     console.log("Click en Modificar Sobre mi...");
   }
+
+  ocultar(e:boolean){
+    this.showModal=e;
+  }
+  
 }

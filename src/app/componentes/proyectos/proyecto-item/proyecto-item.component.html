@@ -17,7 +17,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <app-form-proyecto [proyecto]="this.proyecto" ></app-form-proyecto>
+                            <app-form-proyecto [proyecto]="this.proyecto" (hideModal)="ocultar($event)" ></app-form-proyecto>
                         </div>
                     </div>
                 </div>

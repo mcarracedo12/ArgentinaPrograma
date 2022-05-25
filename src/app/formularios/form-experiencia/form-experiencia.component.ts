@@ -13,6 +13,7 @@ import { Input } from '@angular/core';
 export class FormExperienciaComponent implements OnInit {
   @Output() onAddExperiencia: EventEmitter<experiencia> = new EventEmitter();
   @Input() experiencia: experiencia = this;
+  @Output() hideModal:EventEmitter<boolean> = new EventEmitter();
   
   // id?: number;
   empresa: string = "";
@@ -22,6 +23,7 @@ export class FormExperienciaComponent implements OnInit {
   link: string = "";
   img: string = "";
 
+  showModal:boolean=true;
   constructor() { }
 
   ngOnInit(): void {
@@ -62,6 +64,8 @@ export class FormExperienciaComponent implements OnInit {
                 this.onAddExperiencia.emit(newExperiencia);
                 console.log(newExperiencia);
                 alert("Experiencia agregada!");
+                this.showModal=false;
+                this.hideModal.emit(false);
               }
             };
           };

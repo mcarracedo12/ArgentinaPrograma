@@ -1,4 +1,4 @@
-// import { Component, OnInit } from '@angular/core';
+// import { Component, OnInit, EventEmitter } from '@angular/core';
 // import { Router, ActivatedRoute } from '@angular/router';
 // import { AuthService } from 'src/app/servicios/auth.service';
 
@@ -75,8 +75,9 @@
 // }
 /////////ACA TERMINA EL CODIGO QUE TENIA EN GIT QUE NO VA
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { PortfolioService } from "src/app/servicios/portfolio.service";
+
 
 @Component({
   selector: 'app-login',
@@ -85,11 +86,12 @@ import { PortfolioService } from "src/app/servicios/portfolio.service";
 })
 
 export class LoginComponent implements OnInit {
+  @Output() hideModal:EventEmitter<boolean> = new EventEmitter();
   email: string = "";
   password: string = "";
   rightPassword:string="";
   rightEmail:string="";
-  showModal: Boolean = true;
+  showModal: boolean = true;
   constructor(private obtenerDatos: PortfolioService) { }
 
   portfolioDatos: any;
@@ -110,6 +112,8 @@ export class LoginComponent implements OnInit {
       if (this.password == this.rightPassword) {
         localStorage.setItem('token', 'logueado');
         alert("Iniciaste sesión!! Ya podés modificar tus datos!")
+        this.showModal=false;
+        this.hideModal.emit(false);
       }
       else {
         alert("Contraseña es " + this.rightPassword)

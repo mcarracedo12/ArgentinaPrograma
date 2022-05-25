@@ -28,5 +28,9 @@ export class EducacionItemComponent implements OnInit {
     return (localStorage.getItem('token') !== null);
   }
 
+  ocultar(e:boolean){
+    this.showModal=e;
+  }
+  
 
 }

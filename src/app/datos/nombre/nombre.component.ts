@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -7,25 +7,31 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./nombre.component.css']
 })
 export class NombreComponent implements OnInit {
-infoData:any;
-showNombre:boolean=false;
-nombre:string=""
+  infoData: any;
+  showModal: boolean = false;
+  nombre: string = "";
 
-  constructor(private obtenerDatos:PortfolioService) { }
+  constructor(private obtenerDatos: PortfolioService) { }
 
   ngOnInit(): void {
     this.obtenerDatos.obtenerDatos().subscribe(data => {
       // console.log(data);
       this.infoData = data;
-      this.nombre=data.nombre;
+      this.nombre = data.nombre;
+      // this.
     });
   }
-  public get logIn(): boolean{
-    return(localStorage.getItem('token')!==null);
+  public get logIn(): boolean {
+    return (localStorage.getItem('token') !== null);
   }
-  modificarDato(nombre:string){
+  modificarDato(nombre: string) {
     // data.nombre=nombre;
     console.log("Click en Modificar Datos" + nombre);
     this.obtenerDatos.updateNombre(nombre).subscribe();
   }
+
+  ocultar(e: boolean) {
+    this.showModal = e;
+  }
+
 }

@@ -25,6 +25,8 @@ export class InfoComponent implements OnInit {
   modificarFoto(){
     console.log("Click en Modificar Foto");
   }
+
+  
   
 }
 

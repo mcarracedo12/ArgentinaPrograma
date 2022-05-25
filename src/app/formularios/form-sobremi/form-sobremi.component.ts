@@ -8,8 +8,10 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class FormSobremiComponent implements OnInit {
   @Output() onAddSobreMi:EventEmitter<string>=new EventEmitter();
+  @Output() hideModal:EventEmitter<boolean>=new EventEmitter();
   sobremi: string = "";
   infoData: any;
+  showModal:boolean=true;
   constructor(private obtenerDatos: PortfolioService) { }
 
   onEnviar() {
@@ -21,6 +23,8 @@ export class FormSobremiComponent implements OnInit {
       this.onAddSobreMi.emit(this.sobremi);
       console.log(this.sobremi);
       alert("Sobre mi agregado!");
+      this.showModal=false;
+      this.hideModal.emit(this.showModal);
     }
   }
 

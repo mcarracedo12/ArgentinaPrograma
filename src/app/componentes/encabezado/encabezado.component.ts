@@ -9,30 +9,28 @@ import { AuthService } from 'src/app/servicios/auth.service';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
-  portfolio:any;
-  showModal:Boolean=false;
-  constructor(public obtenerDatos: PortfolioService){}
+  portfolio: any;
+  showModal: boolean=false;
+  constructor(public obtenerDatos: PortfolioService) { }
 
   ngOnInit(): void {
-    this.obtenerDatos.obtenerDatos().subscribe(data=>{
+    this.obtenerDatos.obtenerDatos().subscribe(data => {
       console.log(data);
-    this.portfolio=data})
-
+      this.portfolio = data
+    })
+    
   }
-  
-  // public login(email:string, password:string){
-  //   if(email==this.portfolio.contacto && password==this.portfolio.contrasenia) {
-  //       // Guardamos el token en local storage
-  //       localStorage.setItem('token', 'logueado');
-  //     }
-  //   }
 
-  
-  public logout(){
+
+  public logout() {
     localStorage.removeItem("token");
   }
-  public get logIn(): boolean{
-    return(localStorage.getItem('token')!==null);
+  public get logIn(): boolean {
+    return (localStorage.getItem('token') !== null);
+  }
+
+  ocultar(e:boolean){
+    this.showModal=e;
   }
 
 }

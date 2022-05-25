@@ -10,8 +10,10 @@ import { Habilidad } from 'src/assets/data/habilidad';
 export class FormHabilidadComponent implements OnInit {
   @Output()onAddHabilidad:EventEmitter<Habilidad>=new EventEmitter();
   @Input() habilidad:Habilidad=this;
+  @Output() hideModal:EventEmitter<boolean> = new EventEmitter();
   nombre: string = "";
   porcentaje: number=100;
+  showModal:boolean=true;
 
   constructor() { }
 
@@ -30,6 +32,8 @@ export class FormHabilidadComponent implements OnInit {
         this.onAddHabilidad.emit(newHabilidad);
         console.log(newHabilidad);
         alert("Habilidad agregada!");
+        this.showModal=false;
+        this.hideModal.emit(this.showModal);
     }
   }
 }

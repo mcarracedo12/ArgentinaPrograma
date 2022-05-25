@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Proyecto } from '../../../assets/data/proyecto';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
@@ -33,6 +33,10 @@ export class ProyectosComponent implements OnInit {
       // data.proyectos = this.proyectos;
     })
   
+  }
+
+  ocultar(e:boolean){
+    this.showModal=e;
   }
 
 

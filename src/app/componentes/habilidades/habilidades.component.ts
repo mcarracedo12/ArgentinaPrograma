@@ -34,4 +34,9 @@ export class HabilidadesComponent implements OnInit {
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }
+
+  ocultar(e:boolean){
+    this.showModal=e;
+  }
+  
 }

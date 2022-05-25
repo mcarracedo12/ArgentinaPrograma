@@ -9,7 +9,7 @@ import { EXPERIENCIAS } from '../../../../assets/data/mock-exp';
 })
 export class ExperienciaItemComponent implements OnInit {
   @Input() experiencia: experiencia = EXPERIENCIAS[0];
-  @Output() deleteExperiencia: EventEmitter<experiencia> = new EventEmitter()
+  @Output() deleteExperiencia: EventEmitter<experiencia> = new EventEmitter();
   
   showModal: Boolean = false;
   constructor() { }
@@ -28,6 +28,10 @@ export class ExperienciaItemComponent implements OnInit {
 
   public get logIn(): boolean {
     return (localStorage.getItem('token') !== null);
+  }
+
+  ocultar(e:boolean){
+    this.showModal=e;
   }
 
 }

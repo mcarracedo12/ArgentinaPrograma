@@ -10,7 +10,7 @@ import { experiencia } from 'src/assets/data/experiencia';
 })
 export class ExperienciaComponent implements OnInit {
   experiencias:experiencia[]=[];
-  showModal:Boolean=false;
+  showModal:boolean=false;
   constructor(private obtenerDatos:PortfolioService) { }
 
   ngOnInit(): void {
@@ -35,4 +35,9 @@ export class ExperienciaComponent implements OnInit {
   public get logIn(): boolean{
     return(localStorage.getItem('token')!==null);
   }
+
+  ocultar(e:boolean){
+    this.showModal=e;
+  }
+
 }

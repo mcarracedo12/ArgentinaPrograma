@@ -34,6 +34,8 @@ export class EducacionComponent implements OnInit {
         this.titulos=this.titulos.filter(t=>t.id!=titulo.id);
       })
   }
-  
+  ocultar(e:boolean){
+    this.showModal=e;
+  }
 
 }

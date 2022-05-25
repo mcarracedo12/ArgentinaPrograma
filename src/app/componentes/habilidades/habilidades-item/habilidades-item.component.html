@@ -23,7 +23,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <app-form-habilidad [habilidad]=this.habilidad></app-form-habilidad>
+                    <app-form-habilidad [habilidad]=this.habilidad (hideModal)="ocultar($event)"></app-form-habilidad>
                 </div>
             </div>
         </div>

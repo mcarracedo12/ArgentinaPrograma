@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -7,9 +7,11 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./form-dato.component.css']
 })
 export class FormDatoComponent implements OnInit {
+  @Output() hideModal:EventEmitter<boolean> = new EventEmitter();
 
   
   infoData:any;
+  showModal:boolean=true;
 
   
   constructor(private obtenerDatos:PortfolioService) { }
@@ -42,7 +44,9 @@ export class FormDatoComponent implements OnInit {
   }
 
   onEnviar(){
-    console.log("clik en Guardar datos")
+    console.log("clik en Guardar datos");
+    this.showModal=false;
+    this.hideModal.emit(false);
   }
 
 }
