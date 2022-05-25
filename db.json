@@ -65,7 +65,7 @@
                 "inicio": "2016",
                 "fin": "2018",
                 "puesto": "Administradora",
-                "link": "",
+                "link": "https://ar.linkedin.com/company/cuidarte-servicios?original_referer=https%3A%2F%2Fwww.google.com%2F",            
                 "img": "https://media-exp1.licdn.com/dms/image/C4E0BAQGVthY5lYjDAQ/company-logo_200_200/0/1519891901541?e=1661385600&v=beta&t=mqCo0Qe_o1FDC5xrRQWF-5uXAyqD5_fd1GHwebaLA2k"
             },
             {
@@ -126,37 +126,37 @@
         "habilidades": [
             {
                 "id": 1,
-                "habilidad": "Gestion de proyectos",
+                "nombre": "Gestion de proyectos",
                 "porcentaje": 90
             },
             {
                 "id": 2,
-                "habilidad": "Inglés",
+                "nombre": "Inglés",
                 "porcentaje": 90
             },
             {
                 "id": 3,
-                "habilidad": "Trabajo en equipo",
+                "nombre": "Trabajo en equipo",
                 "porcentaje": 90
             },
             {
                 "id": 4,
-                "habilidad": "Administración de personal",
+                "nombre": "Administración de personal",
                 "porcentaje": 90
             },
             {
                 "id": 5,
-                "habilidad": "Coaching",
+                "nombre": "Coaching",
                 "porcentaje": 75
             },
             {
                 "id": 6,
-                "habilidad": "Autogestión",
+                "nombre": "Autogestión",
                 "porcentaje": 90
             },
             {
                 "id": 7,
-                "habilidad": "Testing Automation",
+                "nombre": "Testing Automation",
                 "porcentaje": 75
             }
         ],

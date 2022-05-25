@@ -31,5 +31,10 @@
         Pais:
     </label>
     <input [(ngModel)]="pais" class="form-control" type="pais" name="pais" placeholder="Pais" [defaultValue]=pais>
-    <button type="submit" class="btn btn-primary">Modificar</button>
+    <label for="img" class="col-form-label">
+        Link a su foto:
+    </label>
+    <input [(ngModel)]="img" class="form-control" type="img" name="img" placeholder="Link" >
+ 
+    <button type="submit" class="btn btn-primary">Guardar</button>
 </form>

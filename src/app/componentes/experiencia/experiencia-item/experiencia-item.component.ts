@@ -8,8 +8,6 @@ import { EXPERIENCIAS } from '../../../../assets/data/mock-exp';
   styleUrls: ['./experiencia-item.component.css']
 })
 export class ExperienciaItemComponent implements OnInit {
-  // @Input()task:Task=TASKS[0];
-  // experiencias:any=[];
   @Input() experiencia: experiencia = EXPERIENCIAS[0];
   @Output() deleteExperiencia: EventEmitter<experiencia> = new EventEmitter()
   

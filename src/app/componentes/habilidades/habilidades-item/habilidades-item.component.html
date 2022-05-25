@@ -1,5 +1,5 @@
 <li>
-    {{habilidad.habilidad}} - {{habilidad.porcentaje}}%
+    {{habilidad.nombre}} - {{habilidad.porcentaje}}%
     <div class="progress">
 
         <div class="progress-bar progress-bar-striped" role="progressbar" style="width: {{habilidad.porcentaje}}%"
@@ -23,7 +23,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <app-form-habilidad></app-form-habilidad>
+                    <app-form-habilidad [habilidad]=this.habilidad></app-form-habilidad>
                 </div>
             </div>
         </div>

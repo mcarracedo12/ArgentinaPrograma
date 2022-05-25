@@ -3,37 +3,37 @@ import { Habilidad } from './habilidad';
 export const HABILIDADES:Habilidad[]=[
     {
         "id": 1,
-        "habilidad": "Gestion de proyectos",
+        "nombre": "Gestion de proyectos",
         "porcentaje": 90
     },
     {
         "id": 2,
-        "habilidad": "Inglés",
+        "nombre": "Inglés",
         "porcentaje": 90
     },
     {
         "id": 3,
-        "habilidad": "Trabajo en equipo",
+        "nombre": "Trabajo en equipo",
         "porcentaje": 90
     },
     {
         "id": 4,
-        "habilidad": "Administración de personal",
+        "nombre": "Administración de personal",
         "porcentaje": 90
     },
     {
         "id": 5,
-        "habilidad": "Coaching",
+        "nombre": "Coaching",
         "porcentaje": 75
     },
     {
         "id": 6,
-        "habilidad": "Autogestión",
+        "nombre": "Autogestión",
         "porcentaje": 90
     },
     {
         "id": 7,
-        "habilidad": "Testing Automation",
+        "nombre": "Testing Automation",
         "porcentaje": 75
     }
     

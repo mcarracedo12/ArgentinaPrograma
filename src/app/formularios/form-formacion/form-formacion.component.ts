@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Titulo } from 'src/assets/data/titulo';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-form-formacion',
@@ -8,6 +9,8 @@ import { Titulo } from 'src/assets/data/titulo';
 })
 export class FormFormacionComponent implements OnInit {
   @Output() onAddFormacion: EventEmitter<Titulo> = new EventEmitter();
+  @Input() titulo: Titulo = this;
+    
   // id?: number;
   institucion: string = "";
   inicio: string = "";
@@ -19,6 +22,12 @@ export class FormFormacionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.institucion = this.titulo.institucion;
+    this.inicio = this.titulo.inicio;
+    this.fin = this.titulo.fin;
+    this.carrera = this.titulo.carrera;
+    this.link = this.titulo.link;
+    this.img = this.titulo.img;
   }
 
   onEnviar() {

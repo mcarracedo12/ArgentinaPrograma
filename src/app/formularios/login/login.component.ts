@@ -87,6 +87,8 @@ import { PortfolioService } from "src/app/servicios/portfolio.service";
 export class LoginComponent implements OnInit {
   email: string = "";
   password: string = "";
+  rightPassword:string="";
+  rightEmail:string="";
   showModal: Boolean = true;
   constructor(private obtenerDatos: PortfolioService) { }
 
@@ -95,24 +97,26 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.obtenerDatos.obtenerDatos().subscribe(data => {
       console.log(data);
-      this.portfolioDatos = data
+      this.portfolioDatos = data;
+      this.rightEmail=data.contacto;
+      this.rightPassword=data.contrasenia;
     })
   }
 
 
   onEnviar() {
 
-    if (this.email == "marinacarracedo") {
-      if (this.password == "123") {
+    if (this.email == this.rightEmail) {
+      if (this.password == this.rightPassword) {
         localStorage.setItem('token', 'logueado');
         alert("Iniciaste sesión!! Ya podés modificar tus datos!")
       }
       else {
-        alert("Contraseña es 123")
+        alert("Contraseña es " + this.rightPassword)
       }
     }
     else {
-      alert("Usuario es marinacarracedo")
+      alert("Usuario es " + this.rightEmail)
     }
     console.log("pressed");
   }

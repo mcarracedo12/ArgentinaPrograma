@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Habilidad } from 'src/assets/data/habilidad';
 
 
@@ -9,29 +9,27 @@ import { Habilidad } from 'src/assets/data/habilidad';
 })
 export class FormHabilidadComponent implements OnInit {
   @Output()onAddHabilidad:EventEmitter<Habilidad>=new EventEmitter();
-  habilidad: string = "";
+  @Input() habilidad:Habilidad=this;
+  nombre: string = "";
   porcentaje: number=100;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.nombre=this.habilidad.nombre;
+    this.porcentaje=this.habilidad.porcentaje;
   }
 
   onEnviar() {
-    const { habilidad, porcentaje } = this;
-    const newHabilidad = { habilidad, porcentaje };
+    const { nombre, porcentaje } = this;
+    const newHabilidad = { nombre, porcentaje };
 
-    if (!this.habilidad) {
+    if (!this.nombre) {
       alert("Agregar habilidad!");
     } else {
-      // if (!this.porcentaje) {
-      //   alert("Agregar porcentaje!");
-      // }
-      // else {
         this.onAddHabilidad.emit(newHabilidad);
         console.log(newHabilidad);
         alert("Habilidad agregada!");
-      // }
     }
   }
 }

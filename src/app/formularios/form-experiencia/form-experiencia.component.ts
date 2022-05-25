@@ -2,7 +2,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 // import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { experiencia } from '../../../assets/data/experiencia';
 import { Input } from '@angular/core';
-import { EXPERIENCIAS } from '../../../assets/data/mock-exp';
+
 
 
 @Component({

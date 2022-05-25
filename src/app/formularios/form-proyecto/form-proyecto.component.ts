@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Proyecto } from '../../../assets/data/proyecto';
 
 @Component({
@@ -8,13 +8,19 @@ import { Proyecto } from '../../../assets/data/proyecto';
 })
 export class FormProyectoComponent implements OnInit {
   @Output() onAddProyecto: EventEmitter<Proyecto> = new EventEmitter();
+  @Input() proyecto: Proyecto = this;
+
   nombre: string = "";
   descripcion: string = "";
   anio: string = "";
   link: string = "";
   constructor() { }
-  
+
   ngOnInit(): void {
+    this.nombre = this.proyecto.nombre;
+    this.descripcion = this.proyecto.descripcion;
+    this.anio = this.proyecto.anio;
+    this.link = this.proyecto.link;
   }
 
   onEnviar() {

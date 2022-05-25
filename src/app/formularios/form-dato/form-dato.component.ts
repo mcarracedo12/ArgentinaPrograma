@@ -22,6 +22,7 @@ export class FormDatoComponent implements OnInit {
   ciudad:string="";
   provincia:string="";
   pais:string="";
+  img:string="";
 
 
   ngOnInit(): void {
@@ -36,11 +37,12 @@ export class FormDatoComponent implements OnInit {
       this.ciudad=data.ciudad;
       this.provincia=data.provincia;
       this.pais=data.pais;
+      this.img=data.img;
     });
   }
 
   onEnviar(){
-    console.log("clik en enviar Dato")
+    console.log("clik en Guardar datos")
   }
 
 }
