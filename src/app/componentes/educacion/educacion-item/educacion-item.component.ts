@@ -9,23 +9,24 @@ import { Titulo } from 'src/assets/data/titulo';
   styleUrls: ['./educacion-item.component.css']
 })
 export class EducacionItemComponent implements OnInit {
-@Input()titulo:Titulo=TITULOS[0];
-@Output()deleteTitulo:EventEmitter<Titulo>= new EventEmitter;
+  @Input() titulo: Titulo = TITULOS[0];
+  @Output() deleteTitulo: EventEmitter<Titulo> = new EventEmitter;
+  showModal: Boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  modificarFormacion(){
+  modificarFormacion() {
     console.log('Click en Modificar Formacion');
   }
-  borrarFormacion(){
+  borrarFormacion() {
     console.log("Click en Borrar Titulo" + this.titulo.carrera + this.titulo.id);
     this.deleteTitulo.emit(this.titulo);
   }
-  public get logIn(): boolean{
-    return(localStorage.getItem('token')!==null);
+  public get logIn(): boolean {
+    return (localStorage.getItem('token') !== null);
   }
-  
+
 
 }

@@ -7,20 +7,20 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./sobre-mi.component.css']
 })
 export class SobreMiComponent implements OnInit {
-  sobremiData:any;
-
-  constructor(private obtenerDatos:PortfolioService) {}
+  sobremiData: any;
+  showModal: Boolean = false;
+  constructor(private obtenerDatos: PortfolioService) { }
 
   ngOnInit(): void {
-    this.obtenerDatos.obtenerDatos().subscribe(data=>{
+    this.obtenerDatos.obtenerDatos().subscribe(data => {
       // console.log(data);
-    this.sobremiData=data;
-  });
+      this.sobremiData = data;
+    });
   }
-  public get logIn(): boolean{
-    return(localStorage.getItem('token')!==null);
+  public get logIn(): boolean {
+    return (localStorage.getItem('token') !== null);
   }
-  modificarAbout(){
+  modificarAbout() {
     console.log("Click en Modificar Sobre mi...");
   }
 }

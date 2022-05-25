@@ -8,6 +8,7 @@ import { experiencia } from '../../assets/data/experiencia';
 import { Titulo } from '../../assets/data/titulo';
 import { HttpHeaders } from '@angular/common/http';
 
+
 const httpOptions = {
   headers: new HttpHeaders({
     'content-type': 'application/json'
@@ -19,6 +20,7 @@ const httpOptions = {
 })
 export class PortfolioService {
   private apiUrl = "http://localhost:3000/profile";
+  // private apiUrl = "http://localhost:8080/1";
 
   constructor(private http: HttpClient) { }
 

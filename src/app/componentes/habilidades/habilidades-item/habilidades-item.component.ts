@@ -9,23 +9,24 @@ import { HABILIDADES } from '../../../../assets/data/mock-habilidad';
   styleUrls: ['./habilidades-item.component.css']
 })
 export class HabilidadesItemComponent implements OnInit {
-@Input()habilidad:Habilidad=HABILIDADES[0];
-@Output() deleteHabilidad:EventEmitter<Habilidad>=new EventEmitter()
+  @Input() habilidad: Habilidad = HABILIDADES[0];
+  @Output() deleteHabilidad: EventEmitter<Habilidad> = new EventEmitter()
+  showModal: Boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  modificarHabilidad(){
+  modificarHabilidad() {
     console.log("Click en Modificar Habilidad");
   }
-  borrarHabilidad(){
+  borrarHabilidad() {
     console.log("Click en Borrar Habilidad " + this.habilidad.habilidad);
     console.log("Click en Borrar Habilidad" + this.habilidad + this.habilidad.id);
     this.deleteHabilidad.emit(this.habilidad)
   }
-  public get logIn(): boolean{
-    return(localStorage.getItem('token')!==null);
+  public get logIn(): boolean {
+    return (localStorage.getItem('token') !== null);
   }
 
 

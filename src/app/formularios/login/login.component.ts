@@ -105,6 +105,7 @@ export class LoginComponent implements OnInit {
     if (this.email == "marinacarracedo") {
       if (this.password == "123") {
         localStorage.setItem('token', 'logueado');
+        alert("Iniciaste sesión!! Ya podés modificar tus datos!")
       }
       else {
         alert("Contraseña es 123")

@@ -2,11 +2,12 @@
 
     <div>
         <img class="position-relative profile-img" alt="imagen" [src]='infoData.img' />
-        <app-modificar *ngIf="logIn" (btnClick)="modificarFoto()" (btnClick)="showFoto=true"></app-modificar>
+        <!-- <app-modificar *ngIf="logIn" (btnClick)="modificarFoto()" (btnClick)="showFoto=true"></app-modificar> -->
     </div>
     <div>
-        <app-nombre></app-nombre>
-
+        <div>
+            <h1>{{infoData.nombre}}</h1>
+        </div>
 
         <div id="info-titulo">
             <h3>{{infoData.tituloactual}}</h3>

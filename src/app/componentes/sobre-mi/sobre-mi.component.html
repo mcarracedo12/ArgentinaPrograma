@@ -1,7 +1,26 @@
 <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded">
-    <div class="enc-card"> <h3>Sobre mí</h3>
+    <div class="enc-card">
+        <h3>Sobre mí</h3>
         <p>{{sobremiData.sobremi}}</p>
-        <app-modificar *ngIf="logIn" (btnClick)="modificarAbout()"></app-modificar>
-        <!-- <i class="bi bi-pencil-fill" *ngIf="logIn"></i> -->
+        <app-modificar *ngIf="logIn" (btnClick)="modificarAbout()" (click)="showModal=true"></app-modificar>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Háblenos de usted!</h5>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"
+                            (click)="showModal=false">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <app-form-sobremi></app-form-sobremi>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </div>

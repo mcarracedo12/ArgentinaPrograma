@@ -10,21 +10,22 @@ import { PROYECTOS } from '../../../../assets/data/mock-proyecto';
   styleUrls: ['./proyecto-item.component.css']
 })
 export class ProyectoItemComponent implements OnInit {
-@Input()proyecto:Proyecto=PROYECTOS[0]
-@Output() deleteProyecto:EventEmitter<Proyecto>=new EventEmitter()
+  @Input() proyecto: Proyecto = PROYECTOS[0]
+  @Output() deleteProyecto: EventEmitter<Proyecto> = new EventEmitter()
+  showModal: Boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
-  modificarProyecto(){
+  modificarProyecto() {
     console.log("Click en Modificar Proyecto" + this.proyecto);
   }
-  borrarProyecto(){
+  borrarProyecto() {
     console.log("Click en Borrar Proyecto" + this.proyecto + this.proyecto.id);
     this.deleteProyecto.emit(this.proyecto)
   }
-  public get logIn(): boolean{
-    return(localStorage.getItem('token')!==null);
+  public get logIn(): boolean {
+    return (localStorage.getItem('token') !== null);
   }
 
 }

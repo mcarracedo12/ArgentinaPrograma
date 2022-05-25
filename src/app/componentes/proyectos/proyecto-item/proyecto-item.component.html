@@ -1,9 +1,29 @@
 <li>
-    
+
     <div class="card border-success mb-3" style="max-width: 18rem;">
         <div class="card-header bg-transparent border-success"><a href={{proyecto.link}}>{{proyecto.nombre}}</a>
             <div class="icons" *ngIf="logIn">
-                <app-modificar (btnClick)="modificarProyecto()"></app-modificar>
+                <app-modificar (btnClick)="modificarProyecto()" (click)="showModal=true"></app-modificar>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modifique los datos de su proyecto</h5>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"
+                                    (click)="showModal=false">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <app-form-proyecto></app-form-proyecto>
+                        </div>
+                    </div>
+                </div>
+
+
+
                 <app-borrar (btnClick)="borrarProyecto()"></app-borrar>
             </div>
         </div>

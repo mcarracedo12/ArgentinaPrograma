@@ -1,24 +1,44 @@
-<li  class="item grid" id="experiencia">
-<div class="img g-col-6 g-col-md-3">
-    <!-- <a href={{experiencia.link}}> -->
+<li class="item grid" id="experiencia">
+    <div class="img g-col-6 g-col-md-3">
+        <a href={{experiencia.link}}>
         <img src={{experiencia.img}}>
-    <!-- </a> -->
-</div>
+        </a>
+    </div>
 
-<!-- <div class="descripcion g-col-6 g-col-md-3"> -->
-<div class="descripcion col-8">
-<a href={{experiencia.link}}>
-    <h4>{{experiencia.empresa}}</h4>
-</a>
-    <p>{{experiencia.inicio}} - {{experiencia.fin}}</p>
-    <h5>{{experiencia.puesto}}</h5>
-</div>
+    <!-- <div class="descripcion g-col-6 g-col-md-3"> -->
+    <div class="descripcion col-8">
+        <a href={{experiencia.link}}>
+            <h4>{{experiencia.empresa}}</h4>
+        </a>
+        <p>{{experiencia.inicio}} - {{experiencia.fin}}</p>
+        <h5>{{experiencia.puesto}}</h5>
+    </div>
 
-<div class="icons g-col-6 g-col-md-3" *ngIf="logIn">
-    <!-- <i class="bi bi-pencil-fill"></i>
-    <i class="bi bi-trash3-fill"></i> -->
-    <app-modificar (btnClick)="modificarExperiencia()"></app-modificar>
-    <app-borrar (btnClick)="borrarExperiencia()"></app-borrar>
+    <div class="icons g-col-6 g-col-md-3" *ngIf="logIn">
+       
+        <app-modificar (btnClick)="modificarExperiencia()" (click)="showModal=true"></app-modificar>
 
-</div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modifique los datos de su experiencia</h5>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"
+                            (click)="showModal=false">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <app-form-experiencia [experiencia]=this.experiencia></app-form-experiencia>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <app-borrar (btnClick)="borrarExperiencia()"></app-borrar>
+
+    </div>
 </li>

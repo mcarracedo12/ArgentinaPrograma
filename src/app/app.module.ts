@@ -28,6 +28,7 @@ import { FormProyectoComponent } from './formularios/form-proyecto/form-proyecto
 import { FormFormacionComponent } from './formularios/form-formacion/form-formacion.component';
 import { FormDatoComponent } from './formularios/form-dato/form-dato.component';
 import { NombreComponent } from './datos/nombre/nombre.component';
+import { FormSobremiComponent } from './formularios/form-sobremi/form-sobremi.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { NombreComponent } from './datos/nombre/nombre.component';
     FormProyectoComponent,
     FormFormacionComponent,
     FormDatoComponent,
-    NombreComponent
+    NombreComponent,
+    FormSobremiComponent
   ],
   imports: [
     BrowserModule, 

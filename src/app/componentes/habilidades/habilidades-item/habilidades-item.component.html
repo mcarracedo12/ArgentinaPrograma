@@ -1,18 +1,37 @@
 <li>
     {{habilidad.habilidad}} - {{habilidad.porcentaje}}%
     <div class="progress">
-        
+
         <div class="progress-bar progress-bar-striped" role="progressbar" style="width: {{habilidad.porcentaje}}%"
             aria-valuemin="0" aria-valuemax="100">
         </div>
     </div>
 
     <div class="icons g-col-6 g-col-md-3" *ngIf="logIn">
-        <!-- <i class="bi bi-pencil-fill"></i>
-        <i class="bi bi-trash3-fill"></i> -->
-        <app-modificar (btnClick)="modificarHabilidad()"></app-modificar>
+
+        <app-modificar (btnClick)="modificarHabilidad()" (click)="showModal=true"></app-modificar>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modifique los datos de su habilidad</h5>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"
+                            (click)="showModal=false">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <app-form-habilidad></app-form-habilidad>
+                </div>
+            </div>
+        </div>
+
+
+
         <app-borrar (btnClick)="borrarHabilidad()"></app-borrar>
-        
+
     </div>
 
 

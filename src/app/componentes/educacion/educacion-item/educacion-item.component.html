@@ -1,20 +1,42 @@
-<li  class="item grid">
-   
-    <div class="img g-col-6 g-col-md-3">
-      <a href={{titulo.link}}>
-        <img src={{titulo.img}}>
-      </a>
+<li class="item grid">
+
+  <div class="img g-col-6 g-col-md-3">
+    <a href={{titulo.link}}>
+      <img src={{titulo.img}}>
+    </a>
+  </div>
+
+  <div class="descripcion col-8">
+    <a href="{{titulo.link}}">
+    <h4>{{titulo.institucion}}</h4>
+  </a>
+    <p>{{titulo.inicio}} - {{titulo.fin}}</p>
+    <h5>{{titulo.carrera}}</h5>
+  </div>
+
+  <div class="img icons g-col-6 g-col-md-3" *ngIf="logIn">
+    <app-modificar (btnClick)="modificarFormacion()" (click)="showModal=true"></app-modificar>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modifique los datos de su curso</h5>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"
+              (click)="showModal=false">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <app-form-formacion></app-form-formacion>
+        </div>
+      </div>
     </div>
 
-    <div class="descripcion col-8">
-      <h4>{{titulo.institucion}}</h4>
-      <p>{{titulo.inicio}} - {{titulo.fin}}</p>
-      <h5>{{titulo.carrera}}</h5>
-    </div>
 
-    <div class="img icons g-col-6 g-col-md-3" *ngIf="logIn">
-      <app-modificar (btnClick)="modificarFormacion()"></app-modificar>
-      <app-borrar (btnClick)="borrarFormacion()"></app-borrar>
 
-    </div>
-  </li>
+    <app-borrar (btnClick)="borrarFormacion()"></app-borrar>
+
+  </div>
+
+</li>
