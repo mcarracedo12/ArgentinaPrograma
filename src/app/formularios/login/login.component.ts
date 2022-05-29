@@ -110,7 +110,7 @@ export class LoginComponent implements OnInit {
 
     if (this.email == this.rightEmail) {
       if (this.password == this.rightPassword) {
-        localStorage.setItem('token', 'logueado');
+        localStorage.setItem('token', '1');
         alert("Iniciaste sesión!! Ya podés modificar tus datos!")
         this.showModal=false;
         this.hideModal.emit(false);
@@ -126,15 +126,4 @@ export class LoginComponent implements OnInit {
   }
 
 
-  // onEnviar() {
-  //   const {email, password}=this;
-  //   const newFrom {email, password}
-  //   // if ((this.email !== "marinacarracedo14@gmail.com") && (this.password !== "123")) {
-  //   //   localStorage.setItem('token', 'logueado');
-  //   //   alert("Te logueaste!");
-  //   // };
-
-  //   console.log("Submit pressed");
-  //   // this.onAddTask.emit(newTask);
-  // }
 }

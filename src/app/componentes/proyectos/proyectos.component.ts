@@ -15,11 +15,12 @@ export class ProyectosComponent implements OnInit {
   proyectos: Proyecto[] = [];
   showModal:boolean=false;
   constructor(private obtenerDatos: PortfolioService) { }
+  
   ngOnInit(): void {
-    this.obtenerDatos.obtenerDatos().subscribe(data => {
-      // console.log(data);
-      this.proyectos = data.proyectos
-    })
+      this.obtenerDatos.getProyectos().subscribe(proyectos=>{
+        console.log(proyectos);
+        this.proyectos=proyectos;
+      })
   }
   addProyecto() {
     console.log('Click en agregar Proyecto');

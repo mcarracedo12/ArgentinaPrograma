@@ -15,7 +15,7 @@
   </div>
 
   <div class="img icons g-col-6 g-col-md-3" *ngIf="logIn">
-    <app-modificar (btnClick)="modificarFormacion()" (click)="showModal=true"></app-modificar>
+    <app-modificar (btnClick)="modificarFormacion(titulo)" (click)="showModal=true"></app-modificar>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}" tabindex="-1" role="dialog"
       aria-labelledby="exampleModalLabel" aria-hidden="true">

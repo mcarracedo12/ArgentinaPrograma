@@ -14,11 +14,12 @@ export class HabilidadesComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.obtenerDatos.obtenerDatos().subscribe(data=>{
-      // console.log(data);
-    this.habilidades=data.habilidades})
-
+    this.obtenerDatos.getHabilidades().subscribe(habilidades=>{
+      console.log(habilidades);
+    this.habilidades=habilidades})
   }
+
+
   addHabilidad(){
     console.log('Click en agregar Habilidad');
   }
