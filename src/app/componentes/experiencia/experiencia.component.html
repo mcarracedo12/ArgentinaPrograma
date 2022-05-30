@@ -25,7 +25,7 @@
     </div>
     <ul>
         <app-experiencia-item *ngFor="let experiencia of experiencias" [experiencia]="experiencia"
-            (deleteExperiencia)="borrarExperiencia(experiencia)"></app-experiencia-item>
+            (deleteExperiencia)="borrarExperiencia($event)"></app-experiencia-item>
 
     </ul>
 </div>

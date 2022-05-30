@@ -24,23 +24,17 @@ export class ExperienciaComponent implements OnInit {
 
 
   borrarExperiencia(experiencia: experiencia) {
-    this.experiencias = this.experiencias.filter(p => p.id !== experiencia.id);
-    this.obtenerDatos.borrarExperiencia(experiencia).subscribe(() => {
-      // console.log("Borrando Experiencia... " + experiencia.empresa); 
+    this.obtenerDatos.borrarExperiencia(experiencia).subscribe((e) => {
       this.experiencias = this.experiencias.filter((e) =>
-        //  {return
         e.id !==
         experiencia.id
-        // }
       );
     }
     )
+    console.log("Lista de esperiencias que me quedan... 42 " + this.experiencias); 
   }
 
   addExperiencia(experiencia: experiencia) {
-    this.experiencias.push(experiencia);
-    // this.experiencias= this.experiencias.push(experiencia);
-    // console.log('Click en agregar Experiencia ' experiencia.empresa);
     this.obtenerDatos.agregarExperiencia(experiencia).subscribe((experiencia) => {
        this.experiencias.push(experiencia);
     })

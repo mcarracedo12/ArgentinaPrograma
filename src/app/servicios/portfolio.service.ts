@@ -35,9 +35,7 @@ export class PortfolioService {
 
 
   obtenerDatos(): Observable<any> {
-
     return this.http.get<any>(`${this.apiUrl}/1`, httpOptions);
-    // return this.http.get<any>(`${this.apiUrl}/1`, httpOptions);
   }
 
   getFormacion(): Observable<Titulo[]> {
@@ -49,7 +47,7 @@ export class PortfolioService {
     return this.http.get<Titulo[]>(`${this.apiUrl}/formacion`, httpOptions);
 
     ///////CON GET DESDE OTRO SERVER (DA CORS ERROR)
-    // return this.http.get<Titulo[]>(`${this.apiUrl}/1/formacion`, httpOptions);  SACAR ESTE 1 DE LOS ENDPOINTS
+    // return this.http.get<Titulo[]>(`${this.apiUrl}/formacion`, httpOptions);  SACAR ESTE 1 DE LOS ENDPOINTS
     // let path:string="http://localhost:8080/1/formacion/allow-cors"
     // return this.http.get<Titulo[]>(path, httpOptions);
   }
@@ -75,21 +73,19 @@ export class PortfolioService {
 
 
   borrarProyecto(proyecto: Proyecto): Observable<any> {
-    return this.http.delete<Proyecto>(`${this.apiUrl}/proyecto/${proyecto.id}`);
+    return this.http.delete<Proyecto>(`${this.apiUrl}/proyecto/${proyecto.id}`, httpOptions);
   }
 
   borrarHabilidad(habilidad: Habilidad): Observable<any> {
-    // let delHabil:string=`${this.apiUrl}/habilidad/${habilidad.id}`
-    // return this.http.delete<Habilidad>(delHabil, httpOptions);
-    return this.http.delete<Habilidad>(`${this.apiUrl}/habilidad/${habilidad.id}`);
+    return this.http.delete<Habilidad>(`${this.apiUrl}/habilidad/${habilidad.id}`, httpOptions);
   }
 
   borrarExperiencia(experiencia: experiencia): Observable<any> {
-    return this.http.delete<experiencia>(`${this.apiUrl}/experiencia/${experiencia.id}`);
-    // return this.http.delete<experiencia>(`${this.apiUrl}`, httpOptions);
+   // console.log("Service line 88 " + experiencia.empresa  );
+    return this.http.delete<experiencia>(`${this.apiUrl}/experiencias/${experiencia.id}`, httpOptions);
   }
   borrarTitulo(titulo: Titulo): Observable<any> {
-    return this.http.delete<Titulo>(`${this.apiUrl}/titulo/${titulo.id}`);
+    return this.http.delete<Titulo>(`${this.apiUrl}/titulo/${titulo.id}`, httpOptions);
   }
 
   modificarSobremi(sobremi: string): Observable<any> {

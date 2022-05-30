@@ -22,7 +22,7 @@ export class ExperienciaItemComponent implements OnInit {
     console.log("Click en Modificar Experiencia" + this.experiencia);
   }
   borrarExperiencia() {
-    console.log("Click en Borrar Experiencia" + this.experiencia.empresa + this.experiencia.id);
+   // console.log("Click en Borrar Experiencia 25 " + this.experiencia.empresa + this.experiencia.id);
     this.deleteExperiencia.emit(this.experiencia);
   }
 
