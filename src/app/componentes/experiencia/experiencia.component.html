@@ -2,7 +2,7 @@
     <div class="enc-card">
         <h3>Experiencia</h3>
         <!-- Button trigger modal -->
-        <app-agregar *ngIf="logIn" (btnClick)="showModal=true" data-toggle="modal" data-target="#exampleModal">
+        <app-agregar *ngIf="logIn" (btnClick)="showModal=true"   data-toggle="modal" data-target="#exampleModal">
         </app-agregar>
 
         <!-- Modal -->
@@ -17,7 +17,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <app-form-experiencia (hideModal)="ocultar($event)"></app-form-experiencia>
+                    <app-form-experiencia (hideModal)="ocultar($event)" (onAddExperiencia)="addExperiencia($event)"></app-form-experiencia>
                 </div>
             </div>
         </div>

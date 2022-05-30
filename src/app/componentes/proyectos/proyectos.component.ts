@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Proyecto } from '../../../assets/data/proyecto';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { PROYECTOS } from '../../../assets/data/mock-proyecto';
 
 
 
@@ -12,7 +13,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 
 export class ProyectosComponent implements OnInit {
-  proyectos: Proyecto[] = [];
+  // proyectos: Proyecto[] = [];
+  proyectos: Proyecto[] = PROYECTOS;
   showModal:boolean=false;
   constructor(private obtenerDatos: PortfolioService) { }
   

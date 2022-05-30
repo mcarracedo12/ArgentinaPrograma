@@ -9,7 +9,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class NombreComponent implements OnInit {
   infoData: any;
   showModal: boolean = false;
-  nombre: string = "";
+  persona: any;
 
   constructor(private obtenerDatos: PortfolioService) { }
 
@@ -22,10 +22,11 @@ export class NombreComponent implements OnInit {
   public get logIn(): boolean {
     return (localStorage.getItem('token') !== null);
   }
-  modificarDatos(nombre: string) {
+  modificarDatos(persona: any) {
     // data.nombre=nombre;
-    console.log("Click en Modificar Datos" + nombre);
-    this.obtenerDatos.updateDatos(nombre).subscribe();
+    console.log("Click en Modificar Datos " + persona);
+    this.showModal=true;
+    // this.obtenerDatos.updateDatos(persona).subscribe();
   }
 
   ocultar(e: boolean) {

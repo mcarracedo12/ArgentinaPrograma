@@ -2,7 +2,7 @@
     <div class="enc-card">
         <h3>Sobre mí</h3>
         <p>{{sobremiData.sobremi}}</p>
-        <app-modificar *ngIf="logIn" (btnClick)="modificarAbout()" (click)="showModal=true"></app-modificar>
+        <app-modificar *ngIf="logIn" (btnClick)="modificarAbout(sobremi)" (click)="showModal=true"></app-modificar>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}" tabindex="-1" role="dialog"

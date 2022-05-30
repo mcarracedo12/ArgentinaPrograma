@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./sobre-mi.component.css']
 })
 export class SobreMiComponent implements OnInit {
+
+  sobremi:string="";
   sobremiData: any;
   showModal: Boolean = false;
   constructor(private obtenerDatos: PortfolioService) { }
@@ -20,8 +22,10 @@ export class SobreMiComponent implements OnInit {
   public get logIn(): boolean {
     return (localStorage.getItem('token') !== null);
   }
-  modificarAbout() {
-    console.log("Click en Modificar Sobre mi...");
+  modificarAbout(sobremi:string) {
+     this.sobremi=sobremi;
+    console.log("Click en Modificar Sobre mi..." + sobremi);    
+    this.obtenerDatos.modificarSobremi(sobremi).subscribe();
   }
 
   ocultar(e:boolean){

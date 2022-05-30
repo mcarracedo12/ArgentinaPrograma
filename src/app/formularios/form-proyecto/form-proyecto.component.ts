@@ -44,7 +44,7 @@ export class FormProyectoComponent implements OnInit {
           } else {
             this.onAddProyecto.emit(newProyecto);
             console.log(newProyecto);
-            alert("Proyecto agregado!");
+            alert("Proyecto emitido!");
             this.showModal=false;
             this.hideModal.emit(this.showModal);
           }

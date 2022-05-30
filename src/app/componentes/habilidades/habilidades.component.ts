@@ -26,7 +26,7 @@ export class HabilidadesComponent implements OnInit {
   borrarHabilidad(habilidad:Habilidad){
       this.habilidades=this.habilidades.filter(h=>h.id!=habilidad.id)
       this.obtenerDatos.borrarHabilidad(habilidad).subscribe(() => {
-        console.log("Borrando habilidad ... " + habilidad); // Aca no llega
+        console.log("Borrando habilidad ... " + habilidad); 
         this.habilidades=this.habilidades.filter(h=>h.id!==habilidad.id);
       })
   }

@@ -9,6 +9,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class FormSobremiComponent implements OnInit {
   @Output() onAddSobreMi:EventEmitter<string>=new EventEmitter();
   @Output() hideModal:EventEmitter<boolean>=new EventEmitter();
+  
   sobremi: string = "";
   infoData: any;
   showModal:boolean=true;
