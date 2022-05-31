@@ -36,12 +36,24 @@ export class EducacionComponent implements OnInit {
     });
   }
 
-  public get logIn(): boolean {
-    return (localStorage.getItem('token') !== null);
+  borrarTitulo(titulo: Titulo) {
+    this.obtenerDatos.borrarTitulo(titulo).subscribe((t) => {
+      this.titulos = this.titulos.filter((t) =>
+        t.id !==
+        titulo.id
+      );
+    }
+    )
   }
-  addFormacion() {
-    console.log('Click en agregar Formacion');
+
+  addTitulo(titulo: Titulo) {
+    this.obtenerDatos.agregarTitulo(titulo).subscribe((titulo) => {
+      this.titulos.push(titulo);
+    })
   }
+
+
+
 
   // modificarFormacion(titulo: Titulo) {
   //   let urlModif: string = `${this.apiUrl}/1/titulo/${titulo.id}`;
@@ -49,19 +61,10 @@ export class EducacionComponent implements OnInit {
   //   return this.http.put<Titulo>(urlModif, httpOptions);
   // }
 
-  modificarFormacion(titulo: Titulo) {
-    let urlModif: string = `${this.apiUrl}/1/titulo/${titulo.id}`;
-    console.log('Click en Modificar Formacion Titulo: ' + titulo);
-    return this.http.put<Titulo>(urlModif, httpOptions);
+  public get logIn(): boolean {
+    return (localStorage.getItem('token') !== null);
   }
 
-  borrarTitulo(titulo: Titulo) {
-    this.titulos = this.titulos.filter(p => p.id != titulo.id);
-    this.obtenerDatos.borrarTitulo(titulo).subscribe(() => {
-      console.log("Borrando Titulo... " + titulo); // Aca no llega
-      this.titulos = this.titulos.filter(t => t.id != titulo.id);
-    })
-  }
   ocultar(e: boolean) {
     this.showModal = e;
   }

@@ -1,7 +1,7 @@
 <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded">
     <div class="enc-card">
         <h3>Habilidades</h3>
-        <app-agregar *ngIf="logIn" (btnClick)="addHabilidad()" (btnClick)="showModal=true"></app-agregar>
+        <app-agregar *ngIf="logIn" (btnClick)="showModal=true"></app-agregar>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}" tabindex="-1" role="dialog"
@@ -15,8 +15,9 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <app-form-habilidad (hideModal)="ocultar($event)"></app-form-habilidad>
+                    <app-form-habilidad (hideModal)="ocultar($event)" (onAddHabilidad)="addHabilidad($event)"></app-form-habilidad>
                 </div>
+
             </div>
         </div>
 
@@ -24,7 +25,7 @@
     </div>
     <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded" id="habilidades">
         <ul>
-            <app-habilidades-item *ngFor="let habilidad of habilidades" [habilidad]="habilidad" (deleteHabilidad)="borrarHabilidad(habilidad)">
+            <app-habilidades-item *ngFor="let habilidad of habilidades" [habilidad]="habilidad" (deleteHabilidad)="borrarHabilidad($event)">
                 
             </app-habilidades-item>
         </ul>

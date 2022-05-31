@@ -8,36 +8,43 @@ import { Habilidad } from 'src/assets/data/habilidad';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent implements OnInit {
-  habilidades: Habilidad[]=[];
-  showModal:Boolean=false;
-  constructor(private obtenerDatos:PortfolioService) { }
-  
+  habilidades: Habilidad[] = [];
+  showModal: Boolean = false;
+  constructor(private obtenerDatos: PortfolioService) { }
+
 
   ngOnInit(): void {
-    this.obtenerDatos.getHabilidades().subscribe(habilidades=>{
+    this.obtenerDatos.getHabilidades().subscribe(habilidades => {
       console.log(habilidades);
-    this.habilidades=habilidades})
+      this.habilidades = habilidades
+    })
   }
 
 
-  addHabilidad(){
-    console.log('Click en agregar Habilidad');
-  }
-  borrarHabilidad(habilidad:Habilidad){
-      this.habilidades=this.habilidades.filter(h=>h.id!=habilidad.id)
-      this.obtenerDatos.borrarHabilidad(habilidad).subscribe(() => {
-        console.log("Borrando habilidad ... " + habilidad); 
-        this.habilidades=this.habilidades.filter(h=>h.id!==habilidad.id);
-      })
-  }
-  
-
-  public get logIn(): boolean{
-    return(localStorage.getItem('token')!==null);
+  borrarHabilidad(habilidad: Habilidad) {
+    this.obtenerDatos.borrarHabilidad(habilidad).subscribe((h) => {
+      this.habilidades = this.habilidades.filter((h) =>
+        h.id !==
+        habilidad.id
+      );
+    }
+    )
   }
 
-  ocultar(e:boolean){
-    this.showModal=e;
+  addHabilidad(habilidad: Habilidad) {
+    this.obtenerDatos.agregarHabilidad(habilidad).subscribe((habilidad) => {
+      this.habilidades.push(habilidad);
+    })
   }
-  
+
+
+
+  public get logIn(): boolean {
+    return (localStorage.getItem('token') !== null);
+  }
+
+  ocultar(e: boolean) {
+    this.showModal = e;
+  }
+
 }

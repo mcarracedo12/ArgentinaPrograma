@@ -40,6 +40,15 @@
       "inicio": "2019",
       "fin": "2020",
       "carrera": "Desarrollo Web Full Stack"
+    },
+    {
+      "institucion": "Arg Prog",
+      "inicio": "1524",
+      "fin": "z zv",
+      "carrera": "fdg",
+      "link": "rhnd",
+      "img": "dgnf",
+      "id": 4
     }
   ],
   "experiencias": [
@@ -125,15 +134,6 @@
       "img": "https://media-exp1.licdn.com/dms/image/C4E0BAQHoOQ-fdZsk_g/company-logo_100_100/0/1649080570802?e=2147483647&v=beta&t=Qpd_1BD_FzeQKUEGbnpUG5IfxsESNOrz3yn8FqP8CrI"
     },
     {
-      "empresa": "dsfasd",
-      "inicio": "afdv",
-      "fin": "fadb",
-      "puesto": "adfb",
-      "link": "afdb",
-      "img": "afb",
-      "id": 10
-    },
-    {
       "empresa": "2.37",
       "inicio": "bgvfcd",
       "fin": "bgvf",
@@ -141,6 +141,24 @@
       "link": "gbfvd",
       "img": "fds",
       "id": 11
+    },
+    {
+      "empresa": "Accenture",
+      "inicio": "1524",
+      "fin": "sgfb",
+      "puesto": "dfgbnm",
+      "link": "Accenture",
+      "img": "Accenture",
+      "id": 12
+    },
+    {
+      "empresa": "Nuevo",
+      "inicio": "1524",
+      "fin": "sgfb",
+      "puesto": "dfgbnm",
+      "link": "Accenture",
+      "img": "Accenture",
+      "id": 13
     }
   ],
   "habilidades": [
@@ -178,6 +196,11 @@
       "id": 7,
       "nombre": "Testing Automation",
       "porcentaje": 75
+    },
+    {
+      "nombre": "skill",
+      "porcentaje": 100,
+      "id": 8
     }
   ],
   "proyectos": [
@@ -208,6 +231,13 @@
       "descripcion": "Lista de Tareas en Angular",
       "anio": "2022",
       "link": "https://github.com/mcarracedo12/Lista-de-Tareas"
+    },
+    {
+      "nombre": "cxvb",
+      "descripcion": "zfb",
+      "anio": "zfb",
+      "link": "fdh",
+      "id": 5
     }
   ]
 }

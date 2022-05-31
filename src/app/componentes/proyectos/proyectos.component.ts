@@ -15,31 +15,36 @@ import { PROYECTOS } from '../../../assets/data/mock-proyecto';
 export class ProyectosComponent implements OnInit {
   // proyectos: Proyecto[] = [];
   proyectos: Proyecto[] = PROYECTOS;
-  showModal:boolean=false;
+  showModal: boolean = false;
   constructor(private obtenerDatos: PortfolioService) { }
-  
+
   ngOnInit(): void {
-      this.obtenerDatos.getProyectos().subscribe(proyectos=>{
-        console.log(proyectos);
-        this.proyectos=proyectos;
-      })
+    this.obtenerDatos.getProyectos().subscribe(proyectos => {
+      console.log(proyectos);
+      this.proyectos = proyectos;
+    })
   }
-  addProyecto() {
-    console.log('Click en agregar Proyecto');
-  }
+
 
   borrarProyecto(proyecto: Proyecto) {
-    this.proyectos=this.proyectos.filter(p=>p.id!=proyecto.id);
-    this.obtenerDatos.borrarProyecto(proyecto).subscribe(() => {
-      console.log("Borrando proyecto ... " + proyecto); // Aca no llega
-      this.proyectos=this.proyectos.filter(p=>p.id!=proyecto.id);
-      // data.proyectos = this.proyectos;
-    })
-  
+    this.obtenerDatos.borrarProyecto(proyecto).subscribe((p) => {
+      this.proyectos = this.proyectos.filter((p) =>
+        p.id !==
+        proyecto.id
+      );
+    }
+    )
   }
 
-  ocultar(e:boolean){
-    this.showModal=e;
+  addProyecto(proyecto: Proyecto) {
+    this.obtenerDatos.agregarProyecto(proyecto).subscribe((proyecto) => {
+      this.proyectos.push(proyecto);
+    })
+  }
+
+
+  ocultar(e: boolean) {
+    this.showModal = e;
   }
 
 

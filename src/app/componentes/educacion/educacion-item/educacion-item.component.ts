@@ -25,8 +25,8 @@ export class EducacionItemComponent implements OnInit {
     this.modifyTitulo.emit(titulo);
   }
 
-  borrarFormacion() {
-    console.log("Click en Borrar Titulo" + this.titulo.carrera + this.titulo.id);
+  borrarTitulo() {
+    // console.log("Click en Borrar Titulo" + this.titulo.carrera + this.titulo.id);
     this.deleteTitulo.emit(this.titulo);
   }
   public get logIn(): boolean {

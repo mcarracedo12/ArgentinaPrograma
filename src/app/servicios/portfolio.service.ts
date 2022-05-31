@@ -8,7 +8,7 @@ import { experiencia } from '../../assets/data/experiencia';
 import { Titulo } from '../../assets/data/titulo';
 
 // import { TITULOS } from '../../assets/data/mock-titulos';
-// import { EXPERIENCIAS } from '../../assets/data/mock-exp';
+import { EXPERIENCIAS } from '../../assets/data/mock-exp';
 // import { HABILIDADES } from '../../assets/data/mock-habilidad';
 // import { PROYECTOS } from '../../assets/data/mock-proyecto';
 
@@ -56,7 +56,9 @@ export class PortfolioService {
   getExperiencias(): Observable<experiencia[]> {
     // const experiencias=of (EXPERIENCIAS);
     // return experiencias;
+    // console.log("Las experiencias segun portfolo service ln 59 son: " + experiencias);
     return this.http.get<experiencia[]>(`${this.apiUrl}/experiencias`);
+    
   }
 
   getHabilidades(): Observable<Habilidad[]> {
@@ -88,9 +90,7 @@ export class PortfolioService {
     return this.http.delete<Titulo>(`${this.apiUrl}/titulo/${titulo.id}`, httpOptions);
   }
 
-  modificarSobremi(sobremi: string): Observable<any> {
-    return this.http.put<string>(`${this.apiUrl}/1/sobremi`, sobremi, httpOptions);
-  }
+
 
 
 
@@ -99,9 +99,26 @@ export class PortfolioService {
     console.log(experiencia.empresa + " " + url);
     return this.http.post<experiencia>(url, experiencia, httpOptions);
     
-
   }
 
+  agregarTitulo(titulo: Titulo): Observable<any> {
+    const url:string=`${this.apiUrl}/formacion`;
+    console.log(titulo.carrera + " " + url);
+    return this.http.post<Titulo>(url, titulo, httpOptions);
+  }
+
+
+  agregarHabilidad(habilidad: Habilidad): Observable<any> {
+    const url:string=`${this.apiUrl}/habilidades`;
+    console.log(habilidad.nombre + " " + url);
+    return this.http.post<Habilidad>(url, habilidad, httpOptions);
+  }
+
+  agregarProyecto(proyecto: Proyecto): Observable<any> {
+    const url:string=`${this.apiUrl}/proyectos`;
+    console.log(proyecto.nombre + " " + url);
+    return this.http.post<Proyecto>(url, proyecto, httpOptions);  
+  }
 
 
 
@@ -111,6 +128,9 @@ export class PortfolioService {
     return this.http.put<any>(url, persona);
   }
 
+  modificarSobremi(sobremi: string): Observable<any> {
+    return this.http.put<string>(`${this.apiUrl}/1/sobremi`, sobremi, httpOptions);
+  }
 
 
 }

@@ -6,7 +6,6 @@ import { EncabezadoComponent } from './componentes/encabezado/encabezado.compone
 
 import { PortfolioService } from './servicios/portfolio.service';
 import { HttpClientModule} from '@angular/common/http';
-import { InfoComponent } from './componentes/info/info.component';
 import { SobreMiComponent } from './componentes/sobre-mi/sobre-mi.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
@@ -34,7 +33,6 @@ import { FormSobremiComponent } from './formularios/form-sobremi/form-sobremi.co
   declarations: [
     AppComponent,
     EncabezadoComponent,
-    InfoComponent,
     SobreMiComponent,
     ExperienciaComponent,
     EducacionComponent,
