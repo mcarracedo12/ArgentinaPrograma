@@ -49,6 +49,15 @@
       "link": "agr",
       "img": "arg",
       "id": 6
+    },
+    {
+      "institucion": "Test",
+      "inicio": "2",
+      "fin": "2",
+      "carrera": "2",
+      "link": "2",
+      "img": "2",
+      "id": 7
     }
   ],
   "experiencias": [
@@ -215,11 +224,11 @@
       "link": "https://github.com/mcarracedo12/Lista-de-Tareas"
     },
     {
-      "nombre": "Marinita",
-      "descripcion": "dzfbg",
+      "id": 5,
+      "nombre": "Mariddddddddddddd",
+      "descripcion": "describote plural",
       "anio": "adgf",
-      "link": "fgn",
-      "id": 5
+      "link": "fgn"
     }
   ]
 }

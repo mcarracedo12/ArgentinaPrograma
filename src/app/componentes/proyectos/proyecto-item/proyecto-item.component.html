@@ -3,7 +3,7 @@
     <div class="card border-success mb-3" style="max-width: 18rem;">
         <div class="card-header bg-transparent border-success"><a href={{proyecto.link}}>{{proyecto.nombre}}</a>
             <div class="icons" *ngIf="logIn">
-                <app-modificar (btnClick)="modificarProyecto()" (click)="showModal=true"></app-modificar>
+                <app-modificar (click)="showModal=true"></app-modificar>
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}" tabindex="-1" role="dialog"
@@ -17,7 +17,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <app-form-proyecto [proyecto]="this.proyecto" (hideModal)="ocultar($event)" ></app-form-proyecto>
+                            <app-form-proyecto [proyecto]="this.proyecto" (hideModal)="ocultar($event)" (onAddProyecto)="modificarProyecto($event)"  ></app-form-proyecto>
                         </div>
                     </div>
                 </div>

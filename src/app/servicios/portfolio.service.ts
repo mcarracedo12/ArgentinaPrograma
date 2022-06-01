@@ -9,6 +9,7 @@ import { Titulo } from '../../assets/data/titulo';
 
 // import { TITULOS } from '../../assets/data/mock-titulos';
 import { EXPERIENCIAS } from '../../assets/data/mock-exp';
+// import { url } from 'inspector';
 // import { HABILIDADES } from '../../assets/data/mock-habilidad';
 // import { PROYECTOS } from '../../assets/data/mock-proyecto';
 
@@ -122,6 +123,26 @@ export class PortfolioService {
   }
 
 
+  modificarExperiencia(experiencia: experiencia): Observable<any> {
+    return this.http.put<experiencia>(`${this.apiUrl}/experiencias/${experiencia.id}`, experiencia, httpOptions);
+  }
+
+  modificarTitulo(titulo: Titulo): Observable<any> {
+    return this.http.put<Titulo>(`${this.apiUrl}/formacion/${titulo.id}`, titulo, httpOptions);
+  }
+
+
+  modificarHabilidad(habilidad: Habilidad): Observable<any> {
+    return this.http.put<Habilidad>(`${this.apiUrl}/habilidades/${habilidad.id}`, habilidad, httpOptions);
+  }
+
+  modificarProyecto(proyecto: Proyecto): Observable<any> {
+    console.log("portfolio service modificar proyecto nombre nuevo ln 139: " + proyecto.nombre);
+    const urlModProy:string=`${this.apiUrl}/proyectos/`+proyecto.id;
+    console.log("La url para el put es: " + urlModProy);
+    return this.http.put<Proyecto>(urlModProy, proyecto, httpOptions);
+    
+  }
 
 
   updateDatos(persona: any): Observable<any> {

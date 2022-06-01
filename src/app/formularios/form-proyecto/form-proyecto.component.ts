@@ -11,6 +11,7 @@ export class FormProyectoComponent implements OnInit {
   @Input() proyecto: Proyecto = this;
   @Output() hideModal: EventEmitter<boolean> =new EventEmitter();
 
+  id?:number;
   nombre: string = "";
   descripcion: string = "";
   anio: string = "";
@@ -20,6 +21,7 @@ export class FormProyectoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.id = this.proyecto.id;
     this.nombre = this.proyecto.nombre;
     this.descripcion = this.proyecto.descripcion;
     this.anio = this.proyecto.anio;
@@ -27,8 +29,8 @@ export class FormProyectoComponent implements OnInit {
   }
 
   onEnviar() {
-    const { nombre, descripcion, anio, link } = this;
-    const newProyecto = { nombre, descripcion, anio, link };
+    const { id, nombre, descripcion, anio, link } = this;
+    const newProyecto = { id, nombre, descripcion, anio, link };
 
     if (!this.nombre) {
       alert("Agregar nombre del proyecto!");
