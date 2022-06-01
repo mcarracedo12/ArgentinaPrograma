@@ -23,12 +23,8 @@ export class HabilidadesComponent implements OnInit {
 
   borrarHabilidad(habilidad: Habilidad) {
     this.obtenerDatos.borrarHabilidad(habilidad).subscribe((h) => {
-      this.habilidades = this.habilidades.filter((h) =>
-        h.id !==
-        habilidad.id
-      );
-    }
-    )
+      this.habilidades = this.habilidades.filter((h) => h.id !== habilidad.id);
+    })
   }
 
   addHabilidad(habilidad: Habilidad) {

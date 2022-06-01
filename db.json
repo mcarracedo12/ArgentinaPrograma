@@ -42,13 +42,13 @@
       "carrera": "Desarrollo Web Full Stack"
     },
     {
-      "institucion": "Arg Prog",
-      "inicio": "1524",
-      "fin": "z zv",
-      "carrera": "fdg",
-      "link": "rhnd",
-      "img": "dgnf",
-      "id": 4
+      "institucion": "Acamica",
+      "inicio": "arsga",
+      "fin": "arg",
+      "carrera": "arg",
+      "link": "agr",
+      "img": "arg",
+      "id": 6
     }
   ],
   "experiencias": [
@@ -134,31 +134,13 @@
       "img": "https://media-exp1.licdn.com/dms/image/C4E0BAQHoOQ-fdZsk_g/company-logo_100_100/0/1649080570802?e=2147483647&v=beta&t=Qpd_1BD_FzeQKUEGbnpUG5IfxsESNOrz3yn8FqP8CrI"
     },
     {
-      "empresa": "2.37",
-      "inicio": "bgvfcd",
-      "fin": "bgvf",
-      "puesto": "vfd",
-      "link": "gbfvd",
-      "img": "fds",
-      "id": 11
-    },
-    {
-      "empresa": "Accenture",
-      "inicio": "1524",
-      "fin": "sgfb",
-      "puesto": "dfgbnm",
-      "link": "Accenture",
-      "img": "Accenture",
-      "id": 12
-    },
-    {
-      "empresa": "Nuevo",
-      "inicio": "1524",
-      "fin": "sgfb",
-      "puesto": "dfgbnm",
-      "link": "Accenture",
-      "img": "Accenture",
-      "id": 13
+      "empresa": "31/05",
+      "inicio": "zfdg",
+      "fin": "zfdg",
+      "puesto": "zdf",
+      "link": "zdfg",
+      "img": "zdfg",
+      "id": 14
     }
   ],
   "habilidades": [
@@ -198,7 +180,7 @@
       "porcentaje": 75
     },
     {
-      "nombre": "skill",
+      "nombre": "cxvb",
       "porcentaje": 100,
       "id": 8
     }
@@ -233,10 +215,10 @@
       "link": "https://github.com/mcarracedo12/Lista-de-Tareas"
     },
     {
-      "nombre": "cxvb",
-      "descripcion": "zfb",
-      "anio": "zfb",
-      "link": "fdh",
+      "nombre": "Marinita",
+      "descripcion": "dzfbg",
+      "anio": "adgf",
+      "link": "fgn",
       "id": 5
     }
   ]

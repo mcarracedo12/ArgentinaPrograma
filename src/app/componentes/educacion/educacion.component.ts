@@ -38,12 +38,8 @@ export class EducacionComponent implements OnInit {
 
   borrarTitulo(titulo: Titulo) {
     this.obtenerDatos.borrarTitulo(titulo).subscribe((t) => {
-      this.titulos = this.titulos.filter((t) =>
-        t.id !==
-        titulo.id
-      );
-    }
-    )
+      this.titulos = this.titulos.filter((t) => t.id !== titulo.id );
+    })
   }
 
   addTitulo(titulo: Titulo) {

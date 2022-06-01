@@ -28,6 +28,7 @@ export class PortfolioService {
   // public apiUrl = "http://localhost:8080/1/allow-cors";
   // private apiUrl = "http://localhost:3306/pueba_jpa";
   // private apiUrl = "https://lit-scrubland-49117.herokuapp.com/1/allow-cors";
+  // private apiUrl = "https://murmuring-beach-49183.herokuapp.com"
 
 
   constructor(private http: HttpClient) { }
@@ -75,11 +76,11 @@ export class PortfolioService {
 
 
   borrarProyecto(proyecto: Proyecto): Observable<any> {
-    return this.http.delete<Proyecto>(`${this.apiUrl}/proyecto/${proyecto.id}`, httpOptions);
+    return this.http.delete<Proyecto>(`${this.apiUrl}/proyectos/${proyecto.id}`, httpOptions);
   }
 
   borrarHabilidad(habilidad: Habilidad): Observable<any> {
-    return this.http.delete<Habilidad>(`${this.apiUrl}/habilidad/${habilidad.id}`, httpOptions);
+    return this.http.delete<Habilidad>(`${this.apiUrl}/habilidades/${habilidad.id}`, httpOptions);
   }
 
   borrarExperiencia(experiencia: experiencia): Observable<any> {
@@ -87,7 +88,7 @@ export class PortfolioService {
     return this.http.delete<experiencia>(`${this.apiUrl}/experiencias/${experiencia.id}`, httpOptions);
   }
   borrarTitulo(titulo: Titulo): Observable<any> {
-    return this.http.delete<Titulo>(`${this.apiUrl}/titulo/${titulo.id}`, httpOptions);
+    return this.http.delete<Titulo>(`${this.apiUrl}/formacion/${titulo.id}`, httpOptions);
   }
 
 

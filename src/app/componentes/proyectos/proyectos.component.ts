@@ -28,12 +28,8 @@ export class ProyectosComponent implements OnInit {
 
   borrarProyecto(proyecto: Proyecto) {
     this.obtenerDatos.borrarProyecto(proyecto).subscribe((p) => {
-      this.proyectos = this.proyectos.filter((p) =>
-        p.id !==
-        proyecto.id
-      );
-    }
-    )
+      this.proyectos = this.proyectos.filter((p) => p.id !== proyecto.id);
+    })
   }
 
   addProyecto(proyecto: Proyecto) {
