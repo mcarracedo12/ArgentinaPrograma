@@ -15,7 +15,7 @@ export class FormExperienciaComponent implements OnInit {
   @Input() experiencia: experiencia = this;
   @Output() hideModal:EventEmitter<boolean> = new EventEmitter();
   
-  // id?: number;
+  id?: number;
   empresa: string = "";
   inicio: string = "";
   fin: string = "";
@@ -27,6 +27,7 @@ export class FormExperienciaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.id=this.experiencia.id;
     this.empresa = this.experiencia.empresa;
     this.inicio = this.experiencia.inicio;
     this.fin = this.experiencia.fin;
@@ -36,8 +37,8 @@ export class FormExperienciaComponent implements OnInit {
   }
 
   onEnviar() {
-    const { empresa, inicio, fin, puesto, link, img } = this;
-    const newExperiencia = { empresa, inicio, fin, puesto, link, img };
+    const {id, empresa, inicio, fin, puesto, link, img } = this;
+    const newExperiencia = { id, empresa, inicio, fin, puesto, link, img };
 
     // LOGICA DE FORMULARIO
     if (!this.empresa) {

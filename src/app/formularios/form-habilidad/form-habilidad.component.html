@@ -2,10 +2,10 @@
     <label for="nombre" class="col-form-label">
         Habilidad:
     </label>
-    <input [(ngModel)]="nombre" name="nombre" class="form-control" type="nombre" placeholder="Ingrese habilidad">
+    <input [(ngModel)]="nombre" name="nombre" class="form-control" type="nombre" [defaultValue]=habilidad.nombre placeholder="Ingrese habilidad">
     <label for="porcentaje" class="col-form-label">
         Porcentaje:
     </label>
-    <input [(ngModel)]="porcentaje" name="porcentaje" type="porcentaje" class="form-control" formControlName="porcentaje" placeholder="Ingrese porcentaje">
+    <input [(ngModel)]="porcentaje" name="porcentaje" type="porcentaje" class="form-control" [defaultValue]=habilidad.porcentaje placeholder="Ingrese porcentaje">
     <button type="submit" class="btn btn-primary">Guardar Habilidad</button>
 </form>

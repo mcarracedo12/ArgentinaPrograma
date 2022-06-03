@@ -16,7 +16,7 @@
 
     <div class="icons g-col-6 g-col-md-3" *ngIf="logIn">
        
-        <app-modificar (btnClick)="modificarExperiencia()" (click)="showModal=true"></app-modificar>
+        <app-modificar (click)="showModal=true"></app-modificar>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}" tabindex="-1" role="dialog"
@@ -30,7 +30,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <app-form-experiencia [experiencia]=this.experiencia (hideModal)="ocultar($event)"></app-form-experiencia>
+                    <app-form-experiencia [experiencia]=this.experiencia (hideModal)="ocultar($event)" (onAddExperiencia)="modificarExperiencia($event)"   ></app-form-experiencia>
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <app-form-formacion [titulo]=this.titulo (hideModal)="ocultar($event)"></app-form-formacion>
+          <app-form-formacion [titulo]=this.titulo (hideModal)="ocultar($event)" (onAddFormacion)="modificarFormacion($event)" ></app-form-formacion>
         </div>
       </div>
     </div>

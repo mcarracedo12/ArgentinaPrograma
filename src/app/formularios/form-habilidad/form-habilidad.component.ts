@@ -8,32 +8,41 @@ import { Habilidad } from 'src/assets/data/habilidad';
   styleUrls: ['./form-habilidad.component.css']
 })
 export class FormHabilidadComponent implements OnInit {
-  @Output()onAddHabilidad:EventEmitter<Habilidad>=new EventEmitter();
-  @Input() habilidad:Habilidad=this;
-  @Output() hideModal:EventEmitter<boolean> = new EventEmitter();
+  @Output() onAddHabilidad: EventEmitter<Habilidad> = new EventEmitter();
+  @Input() habilidad: Habilidad = this;
+  @Output() hideModal: EventEmitter<boolean> = new EventEmitter();
+
+  id?: number;
   nombre: string = "";
-  porcentaje: number=100;
-  showModal:boolean=true;
+  porcentaje: number = 100;
+  showModal: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.nombre=this.habilidad.nombre;
-    this.porcentaje=this.habilidad.porcentaje;
+    this.id = this.habilidad.id;
+    this.nombre = this.habilidad.nombre;
+    this.porcentaje = this.habilidad.porcentaje;
   }
 
   onEnviar() {
-    const { nombre, porcentaje } = this;
-    const newHabilidad = { nombre, porcentaje };
+    const { id, nombre, porcentaje } = this;
+    const newHabilidad = { id, nombre, porcentaje };
 
     if (!this.nombre) {
       alert("Agregar habilidad!");
-    } else {
+    }
+    else {
+      if (!this.porcentaje) {
+        alert("Agregar porcentaje!");
+      }
+      else {
         this.onAddHabilidad.emit(newHabilidad);
         console.log(newHabilidad);
         alert("Habilidad agregada!");
-        this.showModal=false;
+        this.showModal = false;
         this.hideModal.emit(this.showModal);
+      }
     }
   }
 }

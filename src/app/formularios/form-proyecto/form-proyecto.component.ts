@@ -9,15 +9,15 @@ import { Proyecto } from '../../../assets/data/proyecto';
 export class FormProyectoComponent implements OnInit {
   @Output() onAddProyecto: EventEmitter<Proyecto> = new EventEmitter();
   @Input() proyecto: Proyecto = this;
-  @Output() hideModal: EventEmitter<boolean> =new EventEmitter();
+  @Output() hideModal: EventEmitter<boolean> = new EventEmitter();
 
-  id?:number;
+  id?: number;
   nombre: string = "";
   descripcion: string = "";
   anio: string = "";
   link: string = "";
 
-  showModal:boolean =true;
+  showModal: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
@@ -47,7 +47,7 @@ export class FormProyectoComponent implements OnInit {
             this.onAddProyecto.emit(newProyecto);
             console.log(newProyecto);
             alert("Proyecto emitido!");
-            this.showModal=false;
+            this.showModal = false;
             this.hideModal.emit(this.showModal);
           }
         }

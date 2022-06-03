@@ -17,9 +17,14 @@ export class HabilidadesItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  modificarHabilidad() {
-    console.log("Click en Modificar Habilidad");
+  modificarHabilidad(habilidad:Habilidad) {
+   this.habilidad=habilidad;
+   this.habilidad.id=habilidad.id;
+   this.habilidad.nombre=habilidad.nombre;
+   this.habilidad.porcentaje=habilidad.porcentaje;
   }
+
+
   borrarHabilidad() {
     console.log("Click en Borrar Habilidad " + this.habilidad.nombre);
     console.log("Click en Borrar Habilidad" + this.habilidad + this.habilidad.id);

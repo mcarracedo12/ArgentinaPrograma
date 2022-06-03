@@ -10,9 +10,9 @@ import { Input } from '@angular/core';
 export class FormFormacionComponent implements OnInit {
   @Output() onAddFormacion: EventEmitter<Titulo> = new EventEmitter();
   @Input() titulo: Titulo = this;
-  @Output() hideModal:EventEmitter<boolean> = new EventEmitter();
-    
-  // id?: number;
+  @Output() hideModal: EventEmitter<boolean> = new EventEmitter();
+
+  id?: number;
   institucion: string = "";
   inicio: string = "";
   fin: string = "";
@@ -20,11 +20,12 @@ export class FormFormacionComponent implements OnInit {
   link: string = "";
   img: string = "";
 
-  showModal:boolean=true;
+  showModal: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.id = this.titulo.id;
     this.institucion = this.titulo.institucion;
     this.inicio = this.titulo.inicio;
     this.fin = this.titulo.fin;
@@ -34,8 +35,8 @@ export class FormFormacionComponent implements OnInit {
   }
 
   onEnviar() {
-    const { institucion, inicio, fin, carrera, link, img } = this;
-    const newFormacion = { institucion, inicio, fin, carrera, link, img };
+    const { id, institucion, inicio, fin, carrera, link, img } = this;
+    const newFormacion = { id, institucion, inicio, fin, carrera, link, img };
 
 
     if (!this.institucion) {
@@ -62,7 +63,7 @@ export class FormFormacionComponent implements OnInit {
                 this.onAddFormacion.emit(newFormacion);
                 console.log(newFormacion);
                 alert("Carrera agregada!");
-                this.showModal=false;
+                this.showModal = false;
                 this.hideModal.emit(this.showModal);
               }
             };
