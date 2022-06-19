@@ -1,7 +1,7 @@
 {
   "1": {
-    "nombre": "Marinita",
-    "tituloactual": "Dev Junior Full Stack",
+    "nombre": "Mariiii",
+    "tituloactual": "Developer Junior Full Stack",
     "empresa": "Accenture",
     "puesto": "Tester Automation",
     "contacto": "marinacarracedo14@gmail.com",
@@ -34,20 +34,11 @@
     {
       "id": 3,
       "institucion": "Acamica - Globant",
-      "link": "https://www.acamica.com/",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmebh9C1N6n1pper5s3O8tsAdCO3CTrAwsgObaJx085ZghCM_lLAKMOKHNIlJ3aQR59g&usqp=CAU",
       "inicio": "2019",
       "fin": "2020",
-      "carrera": "Desarrollo Web Full Stack"
-    },
-    {
-      "id": 4,
-      "institucion": "Arg Progr",
-      "inicio": "1524",
-      "fin": "2022241",
-      "carrera": "xc",
-      "link": "link",
-      "img": "logo"
+      "carrera": "Desarrollo Web Full Stack",
+      "link": "https://www.acamica.com/",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmebh9C1N6n1pper5s3O8tsAdCO3CTrAwsgObaJx085ZghCM_lLAKMOKHNIlJ3aQR59g&usqp=CAU"
     }
   ],
   "experiencias": [
@@ -175,9 +166,9 @@
       "porcentaje": "90"
     },
     {
-      "nombre": "sdfghjk",
-      "porcentaje": 100,
-      "id": 9
+      "id": 9,
+      "nombre": "sa",
+      "porcentaje": "80"
     }
   ],
   "proyectos": [
@@ -211,10 +202,10 @@
     },
     {
       "id": 5,
-      "nombre": "Marii",
-      "descripcion": "modificar",
+      "nombre": "Marina",
+      "descripcion": "sdfghj,",
       "anio": "adgf",
-      "link": "fgn"
+      "link": "yui"
     }
   ]
 }
