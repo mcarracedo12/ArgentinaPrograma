@@ -58,8 +58,6 @@ export class FormFormacionComponent implements OnInit {
                 alert("Agregar link del logo de la empresa!");
               }
               else {
-                // const { empresa, inicio, fin, puesto, link, img } = this;
-                // const newExperiencia = { empresa, inicio, fin, puesto, link, img };
                 this.onAddFormacion.emit(newFormacion);
                 console.log(newFormacion);
                 alert("Carrera agregada!");
@@ -71,9 +69,6 @@ export class FormFormacionComponent implements OnInit {
         };
       }
     }
-
-    // this.onAddFormacion.emit(newFormacion);
-    // console.log(newFormacion);
   }
 
 }

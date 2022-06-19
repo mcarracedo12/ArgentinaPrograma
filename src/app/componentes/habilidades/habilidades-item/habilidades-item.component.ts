@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Habilidad } from 'src/assets/data/habilidad';
 import { HABILIDADES } from '../../../../assets/data/mock-habilidad';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class HabilidadesItemComponent implements OnInit {
   @Input() habilidad: Habilidad = HABILIDADES[0];
   @Output() deleteHabilidad: EventEmitter<Habilidad> = new EventEmitter()
   showModal: Boolean = false;
-  constructor() { }
+  constructor(private obtenerDatos:PortfolioService) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,7 @@ export class HabilidadesItemComponent implements OnInit {
    this.habilidad.id=habilidad.id;
    this.habilidad.nombre=habilidad.nombre;
    this.habilidad.porcentaje=habilidad.porcentaje;
+   this.obtenerDatos.modificarHabilidad(habilidad).subscribe();
   }
 
 

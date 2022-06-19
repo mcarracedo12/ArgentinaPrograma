@@ -1,17 +1,16 @@
 {
   "1": {
-    "id": 1,
-    "nombre": "Marina Carracedo",
-    "puesto": "Automation Tester",
+    "nombre": "Marinita",
+    "tituloactual": "Dev Junior Full Stack",
     "empresa": "Accenture",
-    "tituloactual": "Jr Full Stack Dev",
+    "puesto": "Tester Automation",
     "contacto": "marinacarracedo14@gmail.com",
     "contrasenia": "123",
     "ciudad": "Rosario",
     "provincia": "Santa Fe",
     "pais": "Argentina",
     "img": "./assets/Marina.jpg",
-    "sobremi": "Soy una persona entusiasta, me gustan los retos y me encantaría programar."
+    "sobremi": "Soy entusiasta, me gustan mucho los retos y me encantaría programar."
   },
   "formacion": [
     {
@@ -42,22 +41,13 @@
       "carrera": "Desarrollo Web Full Stack"
     },
     {
-      "institucion": "Acamica",
-      "inicio": "arsga",
-      "fin": "arg",
-      "carrera": "arg",
-      "link": "agr",
-      "img": "arg",
-      "id": 6
-    },
-    {
-      "id": 7,
-      "institucion": "Test 03/06",
-      "inicio": "2",
-      "fin": "2",
-      "carrera": "2",
-      "link": "2",
-      "img": "2"
+      "id": 4,
+      "institucion": "Arg Progr",
+      "inicio": "1524",
+      "fin": "2022241",
+      "carrera": "xc",
+      "link": "link",
+      "img": "logo"
     }
   ],
   "experiencias": [
@@ -77,7 +67,7 @@
       "fin": "2021",
       "puesto": "Administrativa",
       "link": "https://www.facebook.com/Service.Segui/",
-      "img": "https://scontent.fros9-1.fna.fbcdn.net/v/t1.6435-9/107426243_2664833853616275_1030269251836250733_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeE3B_n7fuirAV1w_ODR7H7EdsCGcEIVqZ92wIZwQhWpnxHfcXAYC3vxZexVUurZC1U&_nc_ohc=CGp_OXFO3aUAX-kaarz&_nc_ht=scontent.fros9-1.fna&oh=00_AT8WORp7ftv9GL3FsBT0uyPl910Mi3s3_FHKP9OnCO_aCw&oe=628BFC87"
+      "img": "https://scontent.fros9-1.fna.fbcdn.net/v/t1.6435-9/107426243_2664833853616275_1030269251836250733_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeE3B_n7fuirAV1w_ODR7H7EdsCGcEIVqZ92wIZwQhWpnxHfcXAYC3vxZexVUurZC1U&_nc_ohc=mIEUCE3v86QAX_TdGI2&_nc_ht=scontent.fros9-1.fna&oh=00_AT9jJEhZyoNjiElWlR9E8-sd0nfAvgG_DHnmx5p5b8GuQg&oe=62C35B87"
     },
     {
       "id": 3,
@@ -141,15 +131,6 @@
       "puesto": "Bilingual Agent",
       "link": "https://apexamerica.com/",
       "img": "https://media-exp1.licdn.com/dms/image/C4E0BAQHoOQ-fdZsk_g/company-logo_100_100/0/1649080570802?e=2147483647&v=beta&t=Qpd_1BD_FzeQKUEGbnpUG5IfxsESNOrz3yn8FqP8CrI"
-    },
-    {
-      "id": 14,
-      "empresa": "03/06 14",
-      "inicio": "zfdg",
-      "fin": "zfdg",
-      "puesto": "zdf",
-      "link": "zdfg",
-      "img": "zdfg"
     }
   ],
   "habilidades": [
@@ -189,24 +170,14 @@
       "porcentaje": 75
     },
     {
-      "nombre": "cxvb",
-      "porcentaje": 100,
-      "id": 8
+      "id": 8,
+      "nombre": "juli",
+      "porcentaje": "90"
     },
     {
-      "nombre": "03/06 nueva",
+      "nombre": "sdfghjk",
       "porcentaje": 100,
       "id": 9
-    },
-    {
-      "nombre": "03/06 nueva",
-      "porcentaje": 100,
-      "id": 10
-    },
-    {
-      "nombre": "Marina",
-      "porcentaje": "0100",
-      "id": 11
     }
   ],
   "proyectos": [
@@ -240,8 +211,8 @@
     },
     {
       "id": 5,
-      "nombre": "Mariddddddddddddd",
-      "descripcion": "modifico",
+      "nombre": "Marii",
+      "descripcion": "modificar",
       "anio": "adgf",
       "link": "fgn"
     }

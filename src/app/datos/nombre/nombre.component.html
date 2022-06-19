@@ -2,28 +2,28 @@
     <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded" id="info">
 
         <div>
-            <img class="position-relative profile-img" alt="imagen" [src]='infoData.img' />
-            <app-modificar *ngIf="logIn" (btnClick)="modificarDatos(persona)" (btnClick)="showModal=true"></app-modificar>
+            <img class="position-relative profile-img" alt="imagen" [src]='img' />
+            <app-modificar *ngIf="logIn" (onAddPersona)="modificarDatos($event)" (btnClick)="showModal=true"></app-modificar>
         </div>
         <div>
             <div>
-                <h1>{{infoData.nombre}}</h1>
+                <h1>{{nombre}}</h1>
             </div>
     
             <div id="info-titulo">
-                <h3>{{infoData.tituloactual}}</h3>
+                <h3>{{tituloactual}}</h3>
             </div>
             <div id="info-company">
-                <h2>{{infoData.empresa}}</h2>
+                <h2>{{empresa}}</h2>
             </div>
             <div id="info-puesto">
-                {{infoData.puesto}}
+                {{puesto}}
             </div>
             <div id="info-contact">
-                {{infoData.contacto}}
+                {{contacto}}
             </div>
             <div id="info-location">
-                {{infoData.ciudad}}, {{infoData.provincia}} ({{infoData.pais}})
+                {{ciudad}}, {{provincia}} ({{pais}})
             </div>
         </div>
     
@@ -43,7 +43,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <app-form-dato (hideModal)="ocultar($event)"></app-form-dato>
+                <app-form-dato (hideModal)="ocultar($event)" (onAddPersona)="modificarDatos($event)"></app-form-dato>
             </div>
         </div>
     </div>

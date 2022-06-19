@@ -147,12 +147,12 @@ export class PortfolioService {
 
   updateDatos(persona: any): Observable<any> {
     const url: string = `${this.apiUrl}/1`;
-    return this.http.put<any>(url, persona);
+    return this.http.put<any>(url, persona, httpOptions);
   }
 
-  modificarSobremi(sobremi: string): Observable<any> {
-    return this.http.put<string>(`${this.apiUrl}/1/sobremi`, sobremi, httpOptions);
-  }
+  // modificarSobremi(sobremi: string): Observable<any> {
+  //   return this.http.put<string>(`${this.apiUrl}/1/sobremi`, sobremi, httpOptions);
+  // }
 
 
 }
