@@ -1,16 +1,16 @@
 {
   "1": {
-    "nombre": "Mariiii",
-    "tituloactual": "Developer Junior Full Stack",
+    "nombre": "Marina",
+    "tituloactual": "Dev Junior Full Stack",
     "empresa": "Accenture",
-    "puesto": "Tester Automation",
+    "puesto": "Testing automation",
     "contacto": "marinacarracedo14@gmail.com",
     "contrasenia": "123",
     "ciudad": "Rosario",
     "provincia": "Santa Fe",
     "pais": "Argentina",
     "img": "./assets/Marina.jpg",
-    "sobremi": "Soy entusiasta, me gustan mucho los retos y me encantaría programar."
+    "sobremi": "Muy Entusiasta, me gustan los retos y me encantaría programar."
   },
   "formacion": [
     {
@@ -203,9 +203,9 @@
     {
       "id": 5,
       "nombre": "Marina",
-      "descripcion": "sdfghj,",
-      "anio": "adgf",
-      "link": "yui"
+      "descripcion": "descrip",
+      "anio": "año",
+      "link": "link"
     }
   ]
 }

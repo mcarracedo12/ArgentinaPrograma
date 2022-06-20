@@ -7,7 +7,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./form-sobremi.component.css']
 })
 export class FormSobremiComponent implements OnInit {
-  @Output() onAddSobreMi:EventEmitter<any>=new EventEmitter();
+  @Output() onAddPersona:EventEmitter<any>=new EventEmitter();
   @Output() hideModal:EventEmitter<boolean>=new EventEmitter();
   
   
@@ -49,24 +49,20 @@ export class FormSobremiComponent implements OnInit {
   }
 
   onEnviar() {
-    
+       
     if (!this.sobremi) {
       alert("Cuéntenos algo por favor!");
     } else {
       const { id, nombre, tituloactual, empresa, puesto, contacto, contrasenia, ciudad, provincia, pais, img, sobremi } = this;
       const newPersona = { id, nombre, tituloactual, empresa, puesto, contacto, contrasenia, ciudad, provincia, pais, img, sobremi };
   
-
-      this.onAddSobreMi.emit(newPersona);
+      this.onAddPersona.emit(newPersona);
       console.log(this.sobremi + "form sobre mi ln 25. Evento enviado");
-      alert("Sobre mi agregado!");
+      alert("Sobre mi guardado!");
       this.showModal=false;
       this.hideModal.emit(this.showModal);
       
     }
   }
-
-
-  
 
 }

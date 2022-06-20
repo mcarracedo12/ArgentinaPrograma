@@ -56,7 +56,7 @@ export class FormDatoComponent implements OnInit {
 
     console.log("clik en Guardar datos");
     this.onAddPersona.emit(newPersona);
-    console.log("Persona enviada: " + this.puesto);
+    console.log("Persona enviada: " + this.nombre);
     this.showModal = false;
     this.hideModal.emit(false);
   }

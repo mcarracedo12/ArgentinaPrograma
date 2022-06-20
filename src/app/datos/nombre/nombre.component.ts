@@ -29,7 +29,6 @@ export class NombreComponent implements OnInit {
   ngOnInit(): void {
     this.obtenerDatos.obtenerDatos().subscribe(data => {
       // console.log(data);
-      // this.infoData = data;
       this.nombre = data.nombre;
       this.puesto = data.puesto;
       this.empresa = data.empresa;
@@ -49,31 +48,22 @@ export class NombreComponent implements OnInit {
   modificarDatos(persona: any) {
     this.obtenerDatos.obtenerDatos().subscribe();
     this.persona = persona;
-    this.persona.nombre = persona.nombre;
-    this.persona.puesto = persona.puesto;
-    this.persona.empresa = persona.empresa;
-    this.persona.tituloactual = persona.tituloactual;
-    this.persona.contacto = persona.contacto;
-    this.persona.ciudad = persona.ciudad;
-    this.persona.provincia = persona.provincia;
-    this.persona.pais = persona.pais;
-    this.persona.img = persona.img;
+    this.nombre = persona.nombre;
+    this.puesto = persona.puesto;
+    this.empresa = persona.empresa;
+    this.tituloactual = persona.tituloactual;
+    this.contacto = persona.contacto;
+    this.ciudad = persona.ciudad;
+    this.provincia = persona.provincia;
+    this.pais = persona.pais;
+    this.img = persona.img;
+    this.sobremi = persona.sobremi;
 
-    console.log("Click en Modificar Datos " + this.persona.nombre);
+    console.log("Click en Modificar Datos " + this.nombre);
     this.showModal = true;
-      // this.obtenerDatos.updateDatos(persona).subscribe();
-    // }
-    this.obtenerDatos.updateDatos(persona).subscribe((persona) => {
-      this.nombre = persona.nombre;
-      this.puesto = persona.puesto;
-      this.empresa = persona.empresa;
-      this.tituloactual = persona.tituloactual;
-      this.contacto = persona.contacto;
-      this.ciudad = persona.ciudad;
-      this.provincia = persona.provincia;
-      this.pais = persona.pais;
-      this.img = persona.img
-    });
+    
+    this.obtenerDatos.updateDatos(persona).subscribe();
+    
   }
 
   ocultar(e: boolean) {

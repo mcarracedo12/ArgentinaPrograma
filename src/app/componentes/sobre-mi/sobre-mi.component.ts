@@ -47,29 +47,20 @@ export class SobreMiComponent implements OnInit {
     return (localStorage.getItem('token') !== null);
   }
 
-  // modificarAbout(sobremi: string) {
-  //   this.sobremiData.sobremi = sobremi;
-  //   console.log("Click en Modificar Sobre mi..." + sobremi);
-  //   this.obtenerDatos.modificarSobremi(sobremi).subscribe((sobremi)=>{
-  //     this.sobremiData.sobremi = sobremi;
-  //   });
-  //   // this.obtenerDatos.modificarSobremi(sobremi).subscribe();
-  // }
-
   ocultar(e: boolean) {
     this.showModal = e;
   }
 
   modificarDatos(persona:any) {
-    // this.obtenerDatos.obtenerDatos().subscribe();
     this.persona=persona;
-    this.persona.sobremi = persona.sobremi;
-    console.log("Click en Modificar Datos " + persona.sobremi);
+    console.log("Click en Modificar Datos this.persona.sobremi = " + this.persona.sobremi);
+    this.sobremi = persona.sobremi;
+    console.log("Click en Modificar Datos this.sobremi = " + this.sobremi);
     this.showModal = true;
-    // this.obtenerDatos.updateDatos(persona).subscribe();
-    this.obtenerDatos.updateDatos(persona).subscribe((persona) => {
-     this.sobremi = persona.sobremi;
-    });
+    this.obtenerDatos.updateDatos(persona).subscribe();
+    // this.obtenerDatos.updateDatos(persona).subscribe((persona) => {
+    //  this.sobremi = persona.sobremi;
+    // });
   }
 
 
