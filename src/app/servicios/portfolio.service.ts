@@ -25,11 +25,11 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class PortfolioService {
-  private apiUrl = "http://localhost:3000";
-  // public apiUrl = "http://localhost:8080/1/allow-cors";
+  // private apiUrl = "http://localhost:3000";
+  // public apiUrl = "http://localhost:8080";
   // private apiUrl = "http://localhost:3306/pueba_jpa";
-  // private apiUrl = "https://lit-scrubland-49117.herokuapp.com/1/allow-cors";
-  // private apiUrl = "https://murmuring-beach-49183.herokuapp.com"
+  // private apiUrl = "https://lit-scrubland-49117.herokuapp.com";
+  private apiUrl = "https://murmuring-beach-49183.herokuapp.com"
 
 
   constructor(private http: HttpClient) { }

@@ -13,8 +13,8 @@ import { PROYECTOS } from '../../../assets/data/mock-proyecto';
 
 
 export class ProyectosComponent implements OnInit {
-  // proyectos: Proyecto[] = [];
-  proyectos: Proyecto[] = PROYECTOS;
+  proyectos: Proyecto[] = [];
+  // proyectos: Proyecto[] = PROYECTOS;
   showModal: boolean = false;
   constructor(private obtenerDatos: PortfolioService) { }
 
