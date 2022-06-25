@@ -46,7 +46,7 @@ export class PortfolioService {
     // return formacion;
 
     //////CON GET DESDE JSON SERVER
-    return this.http.get<Titulo[]>(`${this.apiUrl}/formacion`, httpOptions);
+    return this.http.get<Titulo[]>(`${this.apiUrl}/titulos`, httpOptions);
 
     ///////CON GET DESDE OTRO SERVER (DA CORS ERROR)
     // return this.http.get<Titulo[]>(`${this.apiUrl}/formacion`, httpOptions);  SACAR ESTE 1 DE LOS ENDPOINTS
@@ -89,7 +89,7 @@ export class PortfolioService {
     return this.http.delete<experiencia>(`${this.apiUrl}/experiencias/${experiencia.id}`, httpOptions);
   }
   borrarTitulo(titulo: Titulo): Observable<any> {
-    return this.http.delete<Titulo>(`${this.apiUrl}/formacion/${titulo.id}`, httpOptions);
+    return this.http.delete<Titulo>(`${this.apiUrl}/titulos/${titulo.id}`, httpOptions);
   }
 
 
@@ -101,7 +101,7 @@ export class PortfolioService {
   }
 
   agregarTitulo(titulo: Titulo): Observable<any> {
-    const url:string=`${this.apiUrl}/formacion`;
+    const url:string=`${this.apiUrl}/titulos`;
     console.log(titulo.carrera + " " + url);
     return this.http.post<Titulo>(url, titulo, httpOptions);
   }
@@ -125,7 +125,7 @@ export class PortfolioService {
   }
 
   modificarTitulo(titulo: Titulo): Observable<any> {
-    return this.http.put<Titulo>(`${this.apiUrl}/formacion/${titulo.id}`, titulo, httpOptions);
+    return this.http.put<Titulo>(`${this.apiUrl}/titulos/${titulo.id}`, titulo, httpOptions);
   }
 
 
