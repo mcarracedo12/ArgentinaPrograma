@@ -1,6 +1,6 @@
 {
   "1": {
-    "nombre": "Marina",
+    "nombre": "Marina Carracedo",
     "tituloactual": "Dev Junior Full Stack",
     "empresa": "Accenture",
     "puesto": "Testing automation",
@@ -12,7 +12,7 @@
     "img": "./assets/Marina.jpg",
     "sobremi": "Muy Entusiasta, me gustan los retos y me encantaría programar."
   },
-  "formacion": [
+  "titulos": [
     {
       "id": 1,
       "institucion": "Argentina Programa",

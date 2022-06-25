@@ -49,14 +49,6 @@ export class EducacionComponent implements OnInit {
   }
 
 
-
-
-  // modificarFormacion(titulo: Titulo) {
-  //   let urlModif: string = `${this.apiUrl}/1/titulo/${titulo.id}`;
-  //   console.log('Click en Modificar Formacion Titulo: ' + titulo);
-  //   return this.http.put<Titulo>(urlModif, httpOptions);
-  // }
-
   public get logIn(): boolean {
     return (localStorage.getItem('token') !== null);
   }

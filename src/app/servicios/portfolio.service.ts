@@ -26,10 +26,10 @@ const httpOptions = {
 })
 export class PortfolioService {
   // private apiUrl = "http://localhost:3000";
-  // public apiUrl = "http://localhost:8080";
+  public apiUrl = "http://localhost:8080";
   // private apiUrl = "http://localhost:3306/pueba_jpa";
   // private apiUrl = "https://lit-scrubland-49117.herokuapp.com";
-  private apiUrl = "https://murmuring-beach-49183.herokuapp.com"
+  // private apiUrl = "https://murmuring-beach-49183.herokuapp.com"
 
 
   constructor(private http: HttpClient) { }
@@ -91,9 +91,6 @@ export class PortfolioService {
   borrarTitulo(titulo: Titulo): Observable<any> {
     return this.http.delete<Titulo>(`${this.apiUrl}/formacion/${titulo.id}`, httpOptions);
   }
-
-
-
 
 
   agregarExperiencia(experiencia: experiencia): Observable<any> {

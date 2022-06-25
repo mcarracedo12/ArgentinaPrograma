@@ -29,11 +29,14 @@ export class ProyectoItemComponent implements OnInit {
     this.proyecto.descripcion=proyecto.descripcion;
     this.proyecto.anio=proyecto.anio;
     this.proyecto.link=proyecto.link;
-
+   
     console.log("Click en Modificar Proyecto  item ts 31" + this.proyecto.nombre);
     this.obtenerDatos.modificarProyecto(proyecto).subscribe();
      
   }
+
+
+
 
 
   // this.obtenerDatos.borrarHabilidad(habilidad).subscribe((h) => {
