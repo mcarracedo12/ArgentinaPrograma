@@ -10,7 +10,7 @@
     "provincia": "Santa Fe",
     "pais": "Argentina",
     "img": "./assets/Marina.jpg",
-    "sobremi": "Muy Entusiasta, me gustan los retos y me encantaría programar."
+    "sobremi": "Soy muy entusiasta, me gustan los retos y me encantaría programar."
   },
   "titulos": [
     {
@@ -159,16 +159,6 @@
       "id": 7,
       "nombre": "Testing Automation",
       "porcentaje": 75
-    },
-    {
-      "id": 8,
-      "nombre": "juli",
-      "porcentaje": "90"
-    },
-    {
-      "id": 9,
-      "nombre": "sa",
-      "porcentaje": "80"
     }
   ],
   "proyectos": [
@@ -199,13 +189,6 @@
       "descripcion": "Lista de Tareas en Angular",
       "anio": "2022",
       "link": "https://github.com/mcarracedo12/Lista-de-Tareas"
-    },
-    {
-      "id": 5,
-      "nombre": "Marina",
-      "descripcion": "descrip",
-      "anio": "año",
-      "link": "link"
     }
   ]
 }

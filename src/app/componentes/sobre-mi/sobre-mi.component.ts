@@ -58,6 +58,7 @@ export class SobreMiComponent implements OnInit {
     console.log("Click en Modificar Datos this.sobremi = " + this.sobremi);
     this.showModal = true;
     this.obtenerDatos.updateDatos(persona).subscribe();
+    
     // this.obtenerDatos.updateDatos(persona).subscribe((persona) => {
     //  this.sobremi = persona.sobremi;
     // });

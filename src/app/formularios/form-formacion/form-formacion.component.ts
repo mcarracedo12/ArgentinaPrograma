@@ -60,7 +60,7 @@ export class FormFormacionComponent implements OnInit {
               else {
                 this.onAddFormacion.emit(newFormacion);
                 console.log(newFormacion);
-                alert("Carrera agregada!");
+                alert("newFormacion enviado!");
                 this.showModal = false;
                 this.hideModal.emit(this.showModal);
               }

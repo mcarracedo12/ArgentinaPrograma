@@ -2,18 +2,18 @@
     <label for="nombre" class="col-form-label">
         Proyecto:
     </label>
-    <input [(ngModel)]="nombre" class="form-control" type="nombre" name="nombre" placeholder="Nombre del Proyecto">
+    <input [(ngModel)]="nombre" class="form-control" type="nombre" name="nombre" [defaultValue]=proyecto.nombre placeholder="Nombre del Proyecto">
     <label for="descripcion" class="col-form-label">
         Breve descripcion del proyecto:
     </label>
-    <input [(ngModel)]="descripcion" type="descripcion" class="form-control" name="descripcion" placeholder="Descripción...">
+    <input [(ngModel)]="descripcion" type="descripcion" class="form-control" name="descripcion" [defaultValue]=proyecto.descripcion placeholder="Descripción...">
     <label for="anio" class="col-form-label">
         Año:
     </label>
-    <input [(ngModel)]="anio" type="anio" class="form-control" name="anio" placeholder="Ingrese año">
+    <input [(ngModel)]="anio" type="anio" class="form-control" name="anio" [defaultValue]=proyecto.anio placeholder="Ingrese año">
     <label for="link" class="col-form-label">
         Link del Proyecto:
     </label>
-    <input [(ngModel)]="link" type="link" class="form-control" name="link" placeholder="Ingrese link aquí...">
-    <button type="submit" class="btn btn-primary">Guardar Proyecto</button>
+    <input [(ngModel)]="link" type="link" class="form-control" name="link" [defaultValue]=proyecto.link placeholder="Ingrese link aquí...">
+    <button type="submit" class="btn btn-secondary">Guardar Proyecto</button>
 </form>

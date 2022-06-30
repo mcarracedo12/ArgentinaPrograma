@@ -96,6 +96,7 @@ export class PortfolioService {
   agregarExperiencia(experiencia: experiencia): Observable<any> {
     const url:string=`${this.apiUrl}/experiencias`;
     console.log(experiencia.empresa + " " + url);
+    location.reload();
     return this.http.post<experiencia>(url, experiencia, httpOptions);
     
   }
@@ -103,6 +104,7 @@ export class PortfolioService {
   agregarTitulo(titulo: Titulo): Observable<any> {
     const url:string=`${this.apiUrl}/titulos`;
     console.log(titulo.carrera + " " + url);
+    location.reload();
     return this.http.post<Titulo>(url, titulo, httpOptions);
   }
 
@@ -110,12 +112,14 @@ export class PortfolioService {
   agregarHabilidad(habilidad: Habilidad): Observable<any> {
     const url:string=`${this.apiUrl}/habilidades`;
     console.log(habilidad.nombre + " " + url);
+    location.reload();
     return this.http.post<Habilidad>(url, habilidad, httpOptions);
   }
 
   agregarProyecto(proyecto: Proyecto): Observable<any> {
     const url:string=`${this.apiUrl}/proyectos`;
     console.log(proyecto.nombre + " " + url);
+    location.reload();
     return this.http.post<Proyecto>(url, proyecto, httpOptions);  
   }
 

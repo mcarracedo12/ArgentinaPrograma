@@ -1,7 +1,9 @@
 <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded">
     <div class="enc-card">
         <h3>Sobre mí</h3>
-        <p>{{sobremi}}</p>
+        <div class="card mat-card shadow-sm p-3 mb-5 bg-body rounded">
+            <p>{{sobremi}}</p>
+        </div>
         <app-modificar *ngIf="logIn" (click)="showModal=true"></app-modificar>
 
         <!-- Modal -->
@@ -16,7 +18,8 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <app-form-sobremi (hideModal)="ocultar($event)" (onAddPersona)="modificarDatos($event)" ></app-form-sobremi>
+                    <app-form-sobremi (hideModal)="ocultar($event)" (onAddPersona)="modificarDatos($event)">
+                    </app-form-sobremi>
                 </div>
             </div>
         </div>

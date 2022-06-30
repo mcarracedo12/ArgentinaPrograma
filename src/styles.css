@@ -77,7 +77,7 @@ header img{
     margin: 20px;
 }
 
-div.mat-card h1{
+h1{
     font-style: italic;
     font-size: 1.8rem;
     font-weight: 600;
@@ -85,6 +85,19 @@ div.mat-card h1{
     color: indigo;
 }
 
+h5{
+    color: indigo;
+}
+
+h4 {
+    color: indigo;
+    text-decoration: none;
+}
+
+h3{
+    color: indigo;
+    font-weight: 500;
+}
 
 .item {
     margin: 30px;
@@ -159,14 +172,14 @@ li{
     margin: 10px;
     font-size: inherit;
     line-height: 1.5;
-    color: blueviolet;
+    color: fuchsia;
     font-weight: 500;
 }
 .modal-content {
     /* position: relative; */
     display: flex;
     align-items: center;
-    background-color: cornflowerblue;
+    background-color: rgb(219, 217, 217);
 }
 .btn{
     margin:10px;

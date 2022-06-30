@@ -1,7 +1,7 @@
-<li>
+<li class="card mat-card shadow-sm p-3 mb-5 bg-body rounded">
 
-    <div class="card border-success mb-3" style="max-width: 18rem;">
-        <div class="card-header bg-transparent border-success"><a href={{proyecto.link}}>{{proyecto.nombre}}</a>
+    <div class="card border-info bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-info"><a href={{proyecto.link}}>{{proyecto.nombre}}</a>
             <div class="icons" *ngIf="logIn">
                 <app-modificar (click)="showModal=true"></app-modificar>
 
@@ -27,11 +27,11 @@
                 <app-borrar (btnClick)="borrarProyecto()"></app-borrar>
             </div>
         </div>
-        <div class="card-body text-success">
+        <div class="card-body text-info">
             <h5 class="card-title">{{proyecto.descripcion}}</h5>
             <p class="card-text"></p>
         </div>
-        <div class="card-footer bg-transparent border-success">{{proyecto.anio}}</div>
+        <div class="card-footer bg-transparent border-info">{{proyecto.anio}}</div>
     </div>
 
 </li>
