@@ -14,7 +14,7 @@ export class EncabezadoComponent implements OnInit {
   constructor(public obtenerDatos: PortfolioService) { }
 
   ngOnInit(): void {
-    alert("Para probar front solo, copie y pegue en su terminal : json-server --watch db.json --3000");
+    // alert("Para probar front solo, copie y pegue en su terminal : json-server --watch db.json --3000");
     this.obtenerDatos.obtenerDatos().subscribe(data => {
       console.log(data);
       this.portfolio = data
